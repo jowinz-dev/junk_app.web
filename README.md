@@ -1,2 +1,1 @@
 # junk_app.web
-* **
