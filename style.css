@@ -115,15 +115,3 @@ body{
     width: calc(100% - 58%);
     height: 100%;
 }
-.navbar-container {
-    position: relative;
-    z-index: 10; 
-}
-.green-section {
-    position: relative;
-    z-index: 1;  
-}
-.green-section {
-    margin-top: 80px;
-}
-
