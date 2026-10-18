@@ -85,14 +85,14 @@ body{
 }
 .container{
     position: relative;
-    margin: 120px auto 0 auto;
+    margin: 140px auto 40px auto;
     width: 75%;
     height: 550px;
-    background: #020410 url("background.jpeg") no-repeat;
+    background: url("background.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    overflow: hidden; /
+    overflow: hidden; 
 }
 .container .content{
    .container .content {
