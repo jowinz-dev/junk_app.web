@@ -84,17 +84,15 @@ body{
     color: #e4e4e4;
 }
 .container{
-    position: absolute;
-    top: calc(50% + 45px);
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    margin: 120px auto 0 auto;
     width: 75%;
     height: 550px;
-    background: url("background.jpeg") no-repeat;
+    background: #020410 url("background.jpeg") no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; /
 }
 .container .content{
     position: absolute;
