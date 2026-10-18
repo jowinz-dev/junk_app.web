@@ -127,3 +127,54 @@ body{
     width: calc(100% - 58%);
     height: 100%;
 }
+.home-container {
+    max-width: 800px;
+    margin: 120px auto 0 auto; /* Keeps it perfectly spaced below your navbar */
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* Crisp Bright Title */
+.hero-section h1 {
+    color: #ffffff;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+/* Clear, Readable Subtext */
+.hero-section p {
+    color: #94a3b8; /* Soft readable gray-blue */
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 580px;
+    margin: 0 auto 35px auto;
+}
+
+/* Action Button Wrapper */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Interactive Action Buttons */
+.btn-primary {
+    background-color: #22c55e; /* Vibrant action green */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid #475569;
+}
