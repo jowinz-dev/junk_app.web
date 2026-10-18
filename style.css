@@ -22,11 +22,13 @@ body{
     z-index: 100;
 }
 .navbar a{
-    font-size: 16px;
-    color: #e4e4e4;
+ position: relative;
+    font-size: 18px;
+    color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-right: 30px;
+    margin-left: 35px;
+    transition: color 0.3s ease;
 }
 .navbar a::after{
     content: '';
