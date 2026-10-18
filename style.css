@@ -121,5 +121,9 @@ body{
 }
 .green-section {
     position: relative;
-    z-index: 1;     
+    z-index: 1;  
+}
+.green-section {
+    margin-top: 20px;
+}
 
