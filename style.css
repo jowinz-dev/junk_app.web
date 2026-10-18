@@ -129,39 +129,32 @@ body{
 }
 .home-container {
     max-width: 800px;
-    margin: 120px auto 0 auto; /* Keeps it perfectly spaced below your navbar */
+    margin: 120px auto 0 auto;
     padding: 20px;
     text-align: center;
     font-family: sans-serif;
 }
-
-/* Crisp Bright Title */
 .hero-section h1 {
     color: #ffffff;
     font-size: 46px;
     font-weight: 700;
     margin-bottom: 18px;
 }
-
-/* Clear, Readable Subtext */
 .hero-section p {
-    color: #94a3b8; /* Soft readable gray-blue */
+    color: #94a3b8;
     font-size: 18px;
     line-height: 1.6;
     max-width: 580px;
     margin: 0 auto 35px auto;
 }
-
-/* Action Button Wrapper */
 .cta-buttons {
     display: flex;
     justify-content: center;
     gap: 15px;
 }
 
-/* Interactive Action Buttons */
 .btn-primary {
-    background-color: #22c55e; /* Vibrant action green */
+    background-color: #22c55e;
     color: #ffffff;
     padding: 12px 24px;
     border-radius: 6px;
@@ -177,4 +170,76 @@ body{
     text-decoration: none;
     font-weight: 600;
     border: 1px solid #475569;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4%;
+    background-color: #0f172a:
+    border-bottom: 1px solid #1e293b;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 35px;
+    width: auto;
+}
+
+.logo-text {
+    color: #22c55e;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #22c55e;
+}
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 20px;
+    padding: 6px 15px;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    width: 180px;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-box button:hover {
+    color: #22c55e;
 }
