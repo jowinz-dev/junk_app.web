@@ -7,12 +7,15 @@
     content="IE=edge">
     <meta name="viewport"
     content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Producer Dashboard</title>
+    <link rel="stylesheet" href="style.css">
     <title>WELCOME TO JUNK APP ^_^ | GROUP L</title>
     <link rel="stylesheet" href="style.css?v=5">
     <!-- Basic Icons -->
 <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
 </head>
-
+    
 <body>
     <header class="header">
         <nav class="navbar">
@@ -22,7 +25,6 @@
             <a href="#">Contact</a>
             <a href="#">Interact</a>
         </nav>
-
         <form action="#" class="search-bar">
             <input type="text" placeholder="Search...">
             <button type="submit"><i class='bx bx-search'></i></button>
@@ -34,5 +36,106 @@
         </div>
         <div class="logreg-box"></div>
     </div>
+    <div class="dashboard-container">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">♻️ WasteSync</div>
+            <nav>
+                <a href="#" class="active">🏠 Dashboard</a>
+                <a href="#">📊 Analytics</a>
+                <a href="#">⚙️ Profile Settings</a>
+            </nav>
+        </aside>
+        <!-- Main Dashboard Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Welcome Back, Waste Producer</h1>
+                <p>Track, manage, and request local waste collection metrics here.</p>
+            </header>
+
+            <!-- Quick Metrics Cards -->
+            <section class="stats-container">
+                <div class="card">
+                    <h3>Total Logged</h3>
+                    <p class="stat-number">124.5 kg</p>
+                </div>
+                <div class="card">
+                    <h3>Pending Pickups</h3>
+                    <p class="stat-number alert">2</p>
+                </div>
+                <div class="card">
+                    <h3>Recycling Rate</h3>
+                    <p class="stat-number success">68%</p>
+                </div>
+            </section>
+
+            <!-- Split Form and Table View -->
+            <div class="content-grid">
+                
+                <!-- Collection Logging Form -->
+                <section class="form-section">
+                    <h2>Log New Waste Output</h2>
+                    <form id="wasteForm" class="waste-form">
+                        <div class="form-group">
+                            <label for="waste_type">Waste Category</label>
+                            <select id="waste_type" required>
+                                <option value="Organic">Organic / Food Waste</option>
+                                <option value="Plastic">Plastics & Bottles</option>
+                                <option value="Paper">Paper & Cardboard</option>
+                                <option value="Electronic">E-Waste / Hazardous</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="weight">Estimated Weight (kg)</label>
+                            <input type="number" id="weight" step="0.1" min="0.1" placeholder="e.g., 4.5" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Pickup Location Address</label>
+                            <input type="text" id="location" placeholder="e.g., Suite B4, Main Building" required>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Submit Request</button>
+                    </form>
+                </section>
+
+                <!-- History Log Table -->
+                <section class="table-section">
+                    <h2>Recent Logging History</h2>
+                    <div class="table-wrapper">
+                        <table id="historyTable">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Category</th>
+                                    <th>Weight</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Oct 17, 2026</td>
+                                    <td>Plastic</td>
+                                    <td>12.0 kg</td>
+                                    <td><span class="status status-pending">Pending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 15, 2026</td>
+                                    <td>Organic</td>
+                                    <td>8.5 kg</td>
+                                    <td><span class="status status-completed">Collected</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
