@@ -127,30 +127,3 @@ body{
     width: calc(100% - 58%);
     height: 100%;
 }
-.form-container {
-    max-width: 400px;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-input, select, button {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
-
-button {
-    background-color: #22c55e;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-}
