@@ -115,3 +115,25 @@ body{
     width: calc(100% - 58%);
     height: 100%;
 }
+
+#requests-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.request-card {
+    margin-top: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.request-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(23, 107, 58, 0.12);
+}
+
+.status {
+    white-space: nowrap;
+    line-height: 1.8;
+}
