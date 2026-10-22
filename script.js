@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     wasteForm.addEventListener('submit', (event) => {
     
-        event.preventDefault();
+     event.preventDefault();
 
         
         const wasteType = document.getElementById('waste_type').value;
