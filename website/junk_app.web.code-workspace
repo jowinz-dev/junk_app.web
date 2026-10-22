@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../junk_app.web"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "website"
+	}
+}
