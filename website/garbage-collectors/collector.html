@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junk Up | Collector Dashboard</title>
+    <link rel="stylesheet" href="collector.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">♻</span>
+            <div>
+                <h1>Junk Up</h1>
+                <p>Garbage Collectors Dashboard</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <section class="welcome">
+            <div>
+                <h2>Welcome, Collector!</h2>
+                <p>Manage your pickup requests and keep your community clean.</p>
+            </div>
+            <span class="welcome-icon">🌿</span>
+        </section>
+
+        <section class="requests-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Pickup Requests</h2>
+                    <p>Review the requests waiting for collection.</p>
+                </div>
+                <span id="request-count" class="request-count">0 requests</span>
+            </div>
+
+            <div id="requests-container" class="requests-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Junk Up &copy; 2026 | Building a cleaner community</p>
+    </footer>
+
+    <script src="collector.js"></script>
+</body>
+</html>
