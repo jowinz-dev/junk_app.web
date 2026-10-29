@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JUNK APP -Waste Producer Dashboard</title>
+  <link rel="stylesheet" href="waste.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+            <a href="#">Interact</a>
+        </nav>
+
+        <form action="#" class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class='bx bx-search'></i></button>
+        </form>
+    </header>
+
+   <div class="welcom-msg">
+    <h1>Welcome Back to the Waste Producer Dashboard!</h1><br>
+    <p>Manage your waste, track collections and earn rewards for responsible waste sorting.</p><br>
+   </div>
+</div>
+<section class="history-container">
+  <h3>Recent Collection History</h3>
+  
+  <div class="table-wrapper">
+    <table class="history-table">
+    <thead>
+    <tr>
+      <th>Date</th>
+      <th>Waste Category</th>
+      <th>Status</th>
+      <th>Points</th>
+    </tr>
+    </thead>
+   <tbody>
+     <tr class="empty-row">
+     <td colspan="4">No collection requests yet.</td>
+   </tr></tbody></table></div>
+</section>
+<section class="waste-log-container">
+  <h2>Log New Waste Output</h2><br>
+  <p class="subtitle">Select the waste category and request collection.</p>
+
+  <form>
+    <label for="trash">Sorted</label>
+    <select name="trash" id="trash">
+      <option value="Organic waste">Organic waste(Food stuffs)</option>
+      <option value="Inorganic waste">Inorganic waste(eg Plastics, Glass, Paper & Metal)</option>
+     </select>
+   </form>
+
+   <div>
+     <label class="category-btn">
+        <input type="radio" name="waste-category" value="Unsorted">
+        <span>Unsorted</span>
+      </label>
+    </div>
+
+  <form>
+     <label for="days">Scheduled pickup days</label>
+     <select name="days" id="days">
+        <option value="Tuesday">Tuesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Sunday">Sunday</option>
+        </select>
+       </form><br>
+
+    <button type="submit" class="submit-btn">Submit Collection Request</button>
+</section>
+ <section class="stats">
+
+     <div class="stat">
+      <p>Total Points</p>
+      <h2 id="points">0</h2>
+      <small>Confirmed points only</small>
+   </div>
+  </section>
+<footer class="app-footer">
+  <div class="footer-content">
+   <span class="copyright">Junk App &copy; 2026</span>
+   <span class="divider">|</span>
+   <p class="tagline">A cleaner environment starts here with you.</p>
+  </div></footer>
+<script src="script.js"></script>
+   </body>
+</html>
+
