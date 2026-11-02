@@ -21,29 +21,46 @@ body {
     padding:20px;
     grid-template-areas: 
         "header   header   header"
-        "sidebar  welcome  schedule"
+        "sidebar  welcome  welcome"
         "sidebar  history  request"
         "sidebar  log      log"
         "footer   footer   footer";
     max-width: 1400px;
     margin: 0 auto;
 }
-
+.history-box { 
+    grid-area: history; 
+}
+.welcome-box { 
+    grid-area: welcome; 
+}
 .header    { grid-area: header; display: flex; justify-content: space-between; align-items: center; }
 .sidebar   { grid-area: sidebar; display: flex; flex-direction: column; gap: 10px; }
 .welcome-box  { grid-area: welcome; }
-.schedule-box { grid-area: schedule; }
 .history-box  { grid-area: history; }
 .request-box  { grid-area: request; display: flex; align-items: stretch; }
+.request-box   { 
+    grid-area: request; 
+    display: flex; 
+    flex-direction: column;
+    gap: 15px; 
+    align-items: start;
+}
 .log-waste-box { grid-area: log; }
 .footer    { grid-area: footer; text-align: center; }
 
-.header, .sidebar, .welcome-box, .schedule-box, .history-box, .request-box, .log-waste-box, .footer {
+.header, .sidebar, .welcome-box, .schedule-box, .history-box, .request-box, .log-waste-box{
     background: #2b303a; 
     border: 1px solid #3f4756;
     border-radius: 8px;
     padding: 20px;
 }
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    color: #ffffff; 
+  }
 .navbar-header {
     grid-column: 1 / -1; 
 }
