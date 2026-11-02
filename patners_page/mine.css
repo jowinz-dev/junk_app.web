@@ -4,6 +4,7 @@ body{
 #header{
     text-align: center;
     color: black;
+    font-size: 40x
 }
 #open{
     text-align: center;
@@ -56,4 +57,42 @@ body{
     margin-left: 35px;
     margin-right: 35px;
     border-radius: 20px;
+}
+.card-text{
+    font-size: 15px;
+}
+#pen{
+    background-color: blue;
+    border-radius: 10px;
+}
+.pencil{
+    padding: 5px;
+    border-radius: 5px;
+    border-color: brown;
+    bord
+
+}
+#ppp{
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 15px;;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+#tr{
+    width: 60px;
+    height: 60px;
+    transform: translate(10px,13px);
+
+}
+.weee{
+    transform: translate(10px,-38px);
+}
+.lol{
+    padding-left: 30px;
+    padding-right: 30px;
 }
