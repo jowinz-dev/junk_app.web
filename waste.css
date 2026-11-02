@@ -173,7 +173,6 @@ sidebar-footer-promo {
     flex-direction: column;
     gap: 15px;
 }
-
 .panel-header {
     display: flex;
     justify-content: space-between;
