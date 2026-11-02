@@ -1,96 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JUNK APP -Waste Producer Dashboard</title>
-  <link rel="stylesheet" href="waste.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste Producer Dashboard</title>
+    <link rel="stylesheet" href="waste.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <a href="#">Interact</a>
-        </nav>
 
-        <form action="#" class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class='bx bx-search'></i></button>
-        </form>
-    </header>
+    <div class="dashboard-container">
+        <header class="header">
+            <div class="logo">Junk App</div>
+            <nav class="navbar"></nav>
+        </header>
+<aside class="sidebar">
+    <label for="sidebar-menu" class="menu-label">Dashboard Navigation</label>
+    <div class="dropdown-wrapper">
+        <select id="sidebar-menu" class="sidebar-dropdown">
+            <option value="points">Total User Points</option>
+            <option value="notifications">My Notification</option>
+            <option value="profile">My Profile</option>
+        </select>
+    </div>
+</aside>
+<div class="sidebar-footer-promo">
+        <img src="trashcar.jpg" alt="Recycling illustration" />
+       </div>
+        <section class="welcome-box">
+            <h2>Welcome back to the Wasteproducer dashboard</h2>
+           <p>Manage your waste, track collections and earn rewards for responsible waste sorting.</p>
+        </section>
 
-   <div class="welcom-msg">
-    <h1>Welcome Back to the Waste Producer Dashboard!</h1><br>
-    <p>Manage your waste, track collections and earn rewards for responsible waste sorting.</p><br>
-   </div>
-</div>
-<section class="history-container">
-  <h3>Recent Collection History</h3>
-  
-  <div class="table-wrapper">
-    <table class="history-table">
-    <thead>
-    <tr>
-      <th>Date</th>
-      <th>Waste Category</th>
-      <th>Status</th>
-      <th>Points</th>
-    </tr>
-    </thead>
-   <tbody>
-     <tr class="empty-row">
-     <td colspan="4">No collection requests yet.</td>
-   </tr></tbody></table></div>
-</section>
-<section class="waste-log-container">
-  <h2>Log New Waste Output</h2><br>
-  <p class="subtitle">Select the waste category and request collection.</p>
+  <section id="dynamic-display-panel" class="dynamic-panel hidden">
+       <div class="panel-header">
+         <h3 id="panel-title">View Details</h3>
+         <button id="close-panel-btn" class="close-btn">&times;</button></div>
+       <div id="panel-content" class="panel-body">
+            </div>
+        </section>
+
+        <section class="history-box">
+            <h3>Recent Collection History</h3>
+            <table class="history-table">
+      <thead>
+      <tr>
+            <th>Date</th>
+            <th>Waste Category</th>
+            <th>Status</th>
+            <th>Points</th>
+          </tr></thead>
+  <tbody>
+     <tr>
+       <td colspan="4" class="no-data">No Collection request yet</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="schedule-box">
+    <form>
+    <label for="days">Scheduled pickup days</label>
+     <select name="days" id ="days">
+     <option value="Tuesday">Tuesday</option>
+     <option value="Thursday">Thursday</option>
+     <option value="Sunday">Sunday</option>
+     </select>
+     </form><br> 
+        </section>
+
+     <section class="request-box">
+      <button type="submit" class="submit-btn">Submit Collection Request</button>
+     </section>
+
+    <section class="log-waste-box">
+    <h2>Log New Waste Output</h2>
+    <p class="subtitle">Select the waste category and request collection.</p>
 
   <form>
     <label for="trash">Sorted</label>
-    <select name="trash" id="trash">
-      <option value="Organic waste">Organic waste(Food stuffs)</option>
-      <option value="Inorganic waste">Inorganic waste(eg Plastics, Glass, Paper & Metal)</option>
+     <select name="trash" id ="trash">
+     <option value="Organic waste">Organic waste (Eg food stuffs)</option>
+     <option value="Inorganic waste">Inorganic waste (EgPlastics, Metals, E-waste,Glass Papers etc)</option>
      </select>
-   </form>
-
-   <div>
+     </form><br>
      <label class="category-btn">
         <input type="radio" name="waste-category" value="Unsorted">
         <span>Unsorted</span>
       </label>
-    </div>
-
-  <form>
-     <label for="days">Scheduled pickup days</label>
-     <select name="days" id="days">
-        <option value="Tuesday">Tuesday</option>
-        <option value="Thursday">Thursday</option>
-        <option value="Sunday">Sunday</option>
-        </select>
-       </form><br>
-
-    <button type="submit" class="submit-btn">Submit Collection Request</button>
+    </div><br>
 </section>
- <section class="stats">
 
-     <div class="stat">
-      <p>Total Points</p>
-      <h2 id="points">0</h2>
-      <small>Confirmed points only</small>
-   </div>
-  </section>
-<footer class="app-footer">
-  <div class="footer-content">
-   <span class="copyright">Junk App &copy; 2026</span>
-   <span class="divider">|</span>
-   <p class="tagline">A cleaner environment starts here with you.</p>
-  </div></footer>
+ <!-- Footer -->
+   <footer class="footer">
+    Junk App &copy;2026 A clean Environment starts here with you.
+   </footer>
+
+    </div>
 <script src="script.js"></script>
-   </body>
+</body>
 </html>
-
