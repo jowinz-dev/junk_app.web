@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Junk App | Collector Dashboard</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="collector.css">
+</head>
+
+<body>
+
+    <!-- HEADER AND NAVBAR -->
+    <header class="topbar">
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+            <div class="container-fluid">
+
+                <!-- Brand Logo and Name -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+
+                    <img src="Junk_app.png" alt="Junk App Logo"
+                        width="45" height="45">
+
+                    <div class="brand ms-2">
+                        <h1 class="mb-0">Junk App</h1>
+                        <p class="mb-0">Garbage Collectors Dashboard</p>
+                    </div>
+
+                </a>
+
+                <!-- Mobile Navigation Button -->
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Links and Search -->
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                aria-current="page" href="#">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Interact</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Search Form -->
+                    <form class="d-flex ms-lg-3" role="search">
+
+                        <input class="form-control me-2"
+                            type="search"
+                            placeholder="Search"
+                            aria-label="Search">
+
+                        <button class="btn btn-outline-success"
+                            type="submit">Search</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- MAIN DASHBOARD -->
+    <main class="container-fluid">
+
+        <div class="row">
+
+            <!-- 1. SIDEBAR -->
+            <aside class="col-md-3">
+
+                <div>
+
+                    <h5>Collector Menu</h5>
+
+                    <!-- Navigation Menu -->
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Dashboard</li>
+                        <li class="list-group-item">Pickup Requests</li>
+                        <li class="list-group-item">Sorting and JunkPts</li>
+                        <li class="list-group-item">Collection History</li>
+                        <li class="list-group-item">Collector Profile</li>
+
+                    </ul>
+
+                    <!-- Shift Status Card -->
+                    <div class="card">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">Shift Status</h5>
+
+                            <p class="card-text">On Duty</p>
+
+                            <a href="#" class="btn btn-primary">Active</a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+
+            <!-- 2. MAIN DASHBOARD CONTENT -->
+            <div class="col-md-9">
+
+                <!-- WELCOME AND STATISTICS ROW -->
+                <div class="row">
+
+                    <!-- Welcome Section -->
+                    <div class="col-lg-8">
+
+                        <section class="welcome">
+
+                            <h2>Welcome, Collector!</h2>
+
+                            <p>
+                                Manage your pickup requests and keep your
+                                community clean.
+                            </p>
+
+                            <span class="welcome-icon"></span>
+
+                        </section>
+
+                    </div>
+
+
+                    <!-- Statistics Section -->
+                    <div class="col-lg-4">
+
+                        <section class="stats-section">
+
+                            <h3>Dashboard Statistics</h3>
+
+                            <div class="row">
+
+                                <!-- Collector Registration -->
+                                <div class="col-md-6 col-lg-6">
+
+                                    <div class="card">
+
+                                        <div class="card-body">
+
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span>👤</span>
+                                                <h5 class="card-title mb-0">
+                                                    Collector Account
+                                                </h5>
+                                            </div>
+
+                                            <p class="card-text mt-3">
+                                                COL-8820
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Pending Requests -->
+                                <div class="col-md-6 col-lg-6">
+
+                                    <div class="card">
+
+                                        <div class="card-body">
+
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span>⏳</span>
+                                                <h5 class="card-title mb-0">
+                                                    Pending Requests
+                                                </h5>
+                                            </div>
+
+                                            <p class="card-text mt-3">
+                                                3 Requests
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Junk Points -->
+                                <div class="col-md-6 col-lg-6">
+
+                                    <div class="card">
+
+                                        <div class="card-body">
+
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span>⭐</span>
+                                                <h5 class="card-title mb-0">
+                                                    Junk Points
+                                                </h5>
+                                            </div>
+
+                                            <p class="card-text mt-3">
+                                                1,450 Points
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- Total Collected -->
+                                <div class="col-md-6 col-lg-6">
+
+                                    <div class="card">
+
+                                        <div class="card-body">
+
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span>⚖️</span>
+                                                <h5 class="card-title mb-0">
+                                                    Total Collected
+                                                </h5>
+                                            </div>
+
+                                            <p class="card-text mt-3">
+                                                240 KG
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </section>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 3. PICKUP REQUESTS SECTION -->
+                <section class="requests-section">
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>Pickup Requests</h2>
+
+                            <p>
+                                Review the requests waiting for collection.
+                            </p>
+
+                        </div>
+
+                        <span id="request-count" class="request-count">
+                            0 requests
+                        </span>
+
+                    </div>
+
+                    <!-- JavaScript displays requests here -->
+                    <div id="requests-container" class="requests-grid"></div>
+                </section>
+             
+<!-- 4. SORTING AND JUNK POINTS SECTION -->
+<section class="sorting-section">
+
+    <h4>Sorting and Junk Pts</h4>
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h5 class="card-title">Confirm Waste Sorting</h5>
+
+            <!-- Select Accepted Pickup -->
+            <div class="mb-3">
+
+                <label for="pickup" class="form-label">
+                    Select Accepted Pickup
+                </label>
+
+                <select class="form-select" id="pickup">
+
+                    <option selected>Select a pickup</option>
+                    <option value="1">Organic Waste - Customer A</option>
+                    <option value="2">Inorganic Waste - Customer B</option>
+                    <option value="3">Unsorted Waste- Customer C</option>
+
+                </select>
+
+            </div>
+
+            <!-- Measured Weight -->
+            <div class="mb-3">
+
+                <label for="weight" class="form-label">
+                    Measured Weight (KG)
+                </label>
+
+                <input
+                    type="number"
+                    class="form-control"
+                    id="weight"
+                    placeholder="Enter measured weight">
+
+            </div>
+
+            <!-- Sorting Quality -->
+            <div class="mb-3">
+
+                <label for="quality" class="form-label">
+                    Sorting Quality
+                </label>
+
+                <select class="form-select" id="quality">
+
+                    <option selected>Select sorting quality</option>
+                    <option value="100">Sorted</option>
+                    <option value="10">Unsorted</option>
+
+                </select>
+
+            </div>
+
+            <!-- Points Preview -->
+            <p>Points Preview: <strong id="points-preview">0 Points</strong></p>
+
+            <button type="button" class="btn btn-success">
+                Confirm Collection & Award Points
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 5. COLLECTION HISTORY SECTION -->
+<section class="history-section">
+
+    <h4>Collection History</h4>
+
+    <p>View your previously completed collections.</p>
+
+    <div class="table-responsive">
+
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Customer</th>
+                    <th>Waste Category</th>
+                    <th>Weight (KG)</th>
+                    <th>Points</th>
+                    <th>Date Completed</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Customer A</td>
+                    <td>Inorganic</td>
+                    <td>20</td>
+                    <td>100</td>
+                    <td>01/11/2026</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- 6. COLLECTOR PROFILE SECTION -->
+<section class="profile-section">
+
+    <h3>Collector Profile</h3>
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h5 class="card-title">Personal Information</h5>
+
+            <ul class="list-group list-group-flush">
+
+                <li class="list-group-item">
+                    Full Name: Alex Sean
+                </li>
+
+                <li class="list-group-item">
+                    Registration Number: COL-8820
+                </li>
+
+                <li class="list-group-item">
+                    Assigned District: Mukono
+                </li>
+
+                <li class="list-group-item">
+                    Vehicle ID: JUNK-04
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Junk App &copy; 2026 |
+            A cleaner environment starts here with you
+        </p>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JavaScript -->
+    <script src="collector.js"></script>
+
+</body>
+</html>
