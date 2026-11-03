@@ -15,7 +15,7 @@ body {
 
 .dashboard-container {
     display: grid;
-    grid-template-columns: 240px 1fr 1fr;
+    grid-template-columns: var(--sidebar-width, 240px) 1fr 1fr;
     grid-template-rows: auto auto auto;
     gap: 20px;
     padding:20px;
@@ -26,7 +26,10 @@ body {
         "sidebar  log      log"
         "footer   footer   footer";
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
+    box-sizing: border-box;
+    transition: grid-template-columns 0.3s ease;
 }
 .history-box { 
     grid-area: history; 
