@@ -50,9 +50,8 @@ body {
 }
 .header    { grid-area: header; display: flex; justify-content: space-between; align-items: center; }
 .sidebar   { grid-area: sidebar; display: flex; flex-direction: column; gap: 10px; }
-.welcome-box  { grid-area: welcome; }
+.welcome-box  { grid-area: welcome;
 .history-box  { grid-area: history; }
-.request-box  { grid-area: request; display: flex; align-items: stretch; }
 .request-box   { 
     grid-area: request; 
     display: flex; 
