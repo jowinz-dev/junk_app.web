@@ -32,7 +32,14 @@ body {
     transition: grid-template-columns 0.3s ease;
 }
 .history-box { 
-    grid-area: history; 
+    grid-area: history;
+    max-height:180px;
+    display:flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+ 
 }
 .welcome-message{
     grid-area: welcome;
