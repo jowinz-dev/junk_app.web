@@ -34,9 +34,19 @@ body {
 .history-box { 
     grid-area: history; 
 }
-.welcome-box { 
-    grid-area: welcome; 
+.welcome-message{
+    grid-area: welcome;
+    text-align: center;
+    padding:0;
+    color: #ffffff; 
+    font-weight:280px;
 }
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    color: #ffffff; 
+  }
 .header    { grid-area: header; display: flex; justify-content: space-between; align-items: center; }
 .sidebar   { grid-area: sidebar; display: flex; flex-direction: column; gap: 10px; }
 .welcome-box  { grid-area: welcome; }
