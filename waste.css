@@ -69,7 +69,7 @@ body {
 .log-waste-box { grid-area: log; }
 .footer    { grid-area: footer; text-align: center; }
 
-.header, .sidebar, .welcome-box, .schedule-box, .history-box, .request-box, .log-waste-box{
+.header, .sidebar,.schedule-box, .history-box, .request-box, .log-waste-box{
     background: #2b303a; 
     border: 1px solid #3f4756;
     border-radius: 8px;
