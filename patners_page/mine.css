@@ -96,3 +96,9 @@ body{
     padding-left: 30px;
     padding-right: 30px;
 }
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    color: #ffffff; 
+  }
