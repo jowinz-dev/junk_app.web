@@ -113,7 +113,6 @@ body {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
-    padding-top:120px;
 }
 
 .sidebar,.history-box, .request-box, .log-waste-box {
@@ -133,13 +132,13 @@ body {
     grid-row: 1;
     padding: 10px 5px 5px 5px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    margin-top:120px;
 }.welcome-text-bg h2 {
     font-size: 2.2rem;       
     font-weight: 800;     
     margin-bottom: 8px;
     color: #ffffff;
     letter-spacing: -0.5px;
+    margin-top:120px;
 }
 
 .welcome-text-bg p {
