@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    background: rgba(1, 74, 38, 0.349); 
+    backdrop-filter: blur(8px); /* Creates a sleek frosted-glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6b00; /* Main Orange color */
+  letter-spacing: 1px;
+}
+.logo span {
+  color: #ffffff; /* Contrast accent for logo */
+}
+
+
+.sitenav a{
+    font-size: 16px;
+    color: #e4e4e4;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right:50px;
+    margin-left:auto;
+}
+.sitenav a::after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:2px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+.sitenav a:hover::after{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+.search-bar input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    padding:0 15px;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding-left: 10px;
+}
+.search-bar input::placeholder{
+    color: #e4e4e4;
+} 
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline:none;
+    border:none;
+    cursor: pointer;
+}
+.search-bar button i{
+    font-size: 22px;
+    color: #e4e4e4;
+}
+.hero-section {
+  background: url('b2.jpeg');
+  min-height: 35vh;
+  background-position: center;
+  color:#e4e4e4;
+  text-align: center;
+  padding-top: 60px;
+}
+.hero-section h1{
+  margin-top:50px;
+  font-weight:25px;
+  font-size:50px;
+}
+.story-container {
+    background: #f5f1e8;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    align-items: center;
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-gallery {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 300px;
+}
+
+.story-gallery img {
+  width: 150px;
+  height:300px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.story-gallery.img3 {
+  height: 18px;
+}
+
+.vision-mission-wrapper {
+  background: #fdf3d0;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.vm-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+  display: flex; /* THIS makes it side by side */
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.vm-item {
+  flex: 1; /* each takes 50% */
+}
+
+.vm-item h3 {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.vm-item p {
+  font-size: 20px;
+  color: #666;
+  line-height: 1.7;
+}
+
+.vm-line {
+  width: 1px;
+  background: #e0e0e0;
+  min-height: 100px;
+}
+
+/* On phone, stack vertically */
+@media (max-width: 768px) {
+  .vm-card {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .vm-line {
+    width: 100%;
+    height: 1px;
+    min-height: auto;
+  }
+}
+
+.team-wrapper {
+  background: #ecebe0;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.team-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap:30px;
+  justify-content: center;
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+.values-ribbon {
+  background: #a8d5b0;
+  border-radius: 20px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+  padding: 18px 28px 10px 28px;
+  text-align: center;
+  max-width: 90%;
+  margin: 20px auto;
+  width: fit-content;
+  font-size: 18px;
+  font-weight: 500;
+  color: #1a2e05;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto -75px auto;
+}
+
+.values-item {
+  display:flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.vm-card {
+  position: relative;
+  z-index: 1;
+  padding-top: 40px;
+  border-radius: 24px;
+}
