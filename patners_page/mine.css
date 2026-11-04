@@ -1,76 +1,98 @@
 body{
-    background-color: rgb(209, 222, 190);
+    background-color: rgb(129, 198, 129);
 }
-#head{
-    font-family: sans-serif;
-    font-size: 300%;
-    display: inline-block;
-    color: rgb(37, 78, 37);
+#header{
     text-align: center;
-    
+    color: black;
+    font-size: 40x
 }
-#intro{
-    font-family: 'Trebuchet MS';
-    text-align:left;
+#open{
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
-#first{
-    text-align:center;
-}
-.boxx1{
-    border-radius: 5px;
+.head2{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: rgb(33, 33, 45);
+    margin-left: 50px;
+    margin-right: 50px ;
+    border-radius: 20px;
 
 }
-.image1{
-    width: 400px;
-    padding-top: 5px;
-    border-radius: 10px;
-    padding-left: 5px;
-    height: 280px;
-    padding-bottom: 2px;
+#prog{
+    padding-left: 50px;
+    padding-right: 50px;
 
-}
-.image1:hover{
-    transform: translateY(-3px);
 
 }
 .box1{
-    background-color: rgb(120, 193, 120) ;
-    border-radius: 8px;
-    font-family: 'Trebuchet MS';
-    border: 4px solid;
-    border-color: rgb(17, 67, 17);
-    width: 400px;
+    border-radius: 5px;
+    padding: 20px;
+    border-width: 5px;
+
+
 }
-.box1:hover{
-    transform: translateY(-2px);
-}
-#boxx1{
-    position: absolute;
-    top: 218px;
-}
-#boxx2{
-    margin-left: 450px;
-    right: auto;
-    top: 218px;
-    position: absolute;
-}
-#boxx4{
-    margin-left: 450px;
-    right:auto;
-    top: 115%;
-    position: absolute;
-}
-#boxx3{
-    position: absolute;
-    top: 115%;
-}
-.h1{
+#button{
     text-align: center;
 }
-.p2{
-    text-align: left;
-    padding-left: 4px;
+#but{
+    border-radius: 5px;
 }
-#monster{
-    width: 100%;
+#head2{
+    text-align: center;
+    padding-bottom: 15px;
+    padding-top: 35px;
+}
+.row{
+    margin-left: 35px;
+    margin-right: 35px;
+}
+#bomu{
+    background-color: rgb(41, 77, 65);
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 20px;
+}
+.card-text{
+    font-size: 15px;
+}
+#pen{
+    background-color: blue;
+    border-radius: 10px;
+}
+.pencil{
+    padding: 5px;
+    border-radius: 5px;
+    border-color: brown;
+    bord
+
+}
+#ppp{
+    background-color: black;
+    padding-top: 5px;
+    border-radius: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 15px;;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+#tr{
+    width: 60px;
+    height: 60px;
+    transform: translate(10px,13px);
+
+}
+.weee{
+    transform: translate(10px,-38px);
+}
+.lol{
+    padding-left: 30px;
+    padding-right: 30px;
 }
