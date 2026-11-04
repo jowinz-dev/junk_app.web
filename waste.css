@@ -6,18 +6,16 @@
     font-family: sans-serif;
 }
 .log-waste-box {
-    margin-left: 0;    /* Forces the box to align to the absolute left edge */
-    padding: 20p       /* Gives inner padding to match the dashboard boxes */
-    width: 100%;       /* Adjust if your history box has a set max-width */
-    box-sizing: border-box;  /* Prevents padding from shifting the box layout */
-} 
+    grid-column: 2 / span 2;
+    width: 100%;             
+    box-sizing: border-box;  
 
 body {
     background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('garden trash can.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 20px;
+    padding: 100px 20px 20px 20px;
     color: #ffffff; }
 .header{
     position:fixed;
@@ -182,13 +180,6 @@ body {
     grid-row: 2;
     max-height: 180px;
 }
-
-.log-waste-box {
-    grid-column: 2;
-    grid-row: 3;
-     width: 100%;
-}
-
 .footer {
     grid-column: 1 / span 3;
     grid-row: 4;
