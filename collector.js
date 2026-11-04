@@ -1,4 +1,7 @@
-
+if(localStorage.getItem("isLoggedIn")!=="true"){
+    alert("Please sign in first!");
+    window.location.href="index.html";
+}
 const container = document.getElementById("requests-container");
 
 const requests = [

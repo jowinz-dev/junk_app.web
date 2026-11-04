@@ -10,18 +10,13 @@
     <title>WELCOME TO JUNK APP ^_^ | GROUP L</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <header class="header">
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <a href="#">Interact</a>
-        </nav>
-
+        <div id="navbar_placeholder"></div>
         <form action="#" class="search-bar">
             <input type="text" placeholder="Search...">
             <button type="submit"><i class='bx bx-search'></i></button>
@@ -66,6 +61,18 @@
                         <p>Don't have an account?
                         <a href="#" class="register-link">Sign Up</a></p>
                     </div>
+                    <div id="g_id_onload"
+                        data-client_id="558502091989-sgtp955pvcitrhbo9bug6c0d8gv878po.apps.googleusercontent.com"
+                        data-callback="handleCredentialResponse">
+                    </div>
+                    <div class="g_id_signin"
+                        data-type="standard"
+                        data-shape="rectangular"
+                        data-theme="outline"
+                        data-text="sign_in_with"
+                        data-size="large"
+                        data-logo_alignment="left">
+                    </div>
                 </form>
             </div>
             <div class="form-box register">
@@ -87,6 +94,13 @@
                         <input type="password" required>
                         <label>Password</label>
                     </div>
+                    <div class="input-box" style="margin-bottom: 20px;">
+                        <select id="user-role-select" required style="width: 100%; padding: 10px; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: #fff; border-radius: 4px; outline: none;">
+                            <option value="" disabled selected style="background: #020410; color: #fff;">Select your role</option>
+                            <option value="producer" style="background: #020410; color: #fff;">Basic Waste Producer</option>
+                            <option value="collector" style="background: #020410; color: #fff;">Garbage Collector</option>
+                        </select>
+                    </div>
                     <div class="remember-forgot">
                         <label><input type=checkbox>I agree to the terms and conditions.</label>
                     </div>
@@ -99,6 +113,9 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <footer>
+        <p>Junk App &copy; 2026 | A cleaner environment starts here with you</p>
+    </footer>
+    <script src="script.js"></script>    
 </body>
 </html>
