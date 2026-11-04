@@ -15,7 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-     padding:20px; 
+     padding:120px 20px 20px 20px; 
     color: #ffffff; }
 .header{
     position:fixed;
