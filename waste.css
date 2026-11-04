@@ -9,7 +9,7 @@
     grid-column: 2 / span 2;
     width: 100%;             
     box-sizing: border-box;  
-
+}
 body {
     background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('garden trash can.jpg');
     background-size: cover;
@@ -40,8 +40,6 @@ body {
 .logo span {
   color: #ffffff; /* Contrast accent for logo */
 }
-
-
 .sitenav a{
     font-size: 16px;
     color: #e4e4e4;
@@ -114,7 +112,6 @@ body {
     width: 100%;
     margin: 0 auto;
 }
-
 .sidebar,.history-box, .request-box, .log-waste-box {
     background: #2b303a; 
     border: 1px solid #3f4756;
@@ -132,14 +129,14 @@ body {
     grid-row: 1;
     padding: 10px 5px 5px 5px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-}.welcome-text-bg h2 {
+}
+.welcome-text-bg h2 {
     font-size: 2.2rem;       
     font-weight: 800;     
     margin-bottom: 8px;
     color: #ffffff;
     letter-spacing: -0.5px;
 }
-
 .welcome-text-bg p {
     font-size: 1.1rem;    
     font-weight: 500;      
@@ -174,7 +171,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .request-box {
     grid-column: 3;
     grid-row: 2;
