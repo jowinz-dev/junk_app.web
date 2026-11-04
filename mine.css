@@ -1,98 +1,189 @@
-body{
-    background-color: rgb(129, 198, 129);
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    background: rgba(1, 74, 38, 0.349); 
+    backdrop-filter: blur(8px); /* Creates a sleek frosted-glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
-#header{
-    text-align: center;
-    color: black;
-    font-size: 40x
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6b00; /* Main Orange color */
+  letter-spacing: 1px;
 }
-#open{
-    text-align: center;
-    padding-left: 20px;
-    padding-right: 20px;
+.logo span {
+  color: #ffffff; /* Contrast accent for logo */
 }
-.head2{
+body {
+    background-position:absolute;
+    background-repeat:no-repeat;
+    background-image:url('pt2.jpeg');
+    backdrop-filter:blur(20px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centers your card horizontally */
+    justify-content: center;  /* Centers everything nicely on the screen */
+    margin: 0;
+    overflow-x: hidden;
+    padding-top: 80px;        /* Adds breathing room below the fixed header */
+    padding-bottom: 40px;
+}
+
+
+.sitenav a{
+    font-size: 16px;
+    color: #e4e4e4;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right:50px;
+    margin-left:auto;
+}
+.sitenav a::after{
+    content: '';
+    position: fixed;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:2px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+.sitenav a:hover::after{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+.search-bar input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    padding:0 15px;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding-left: 10px;
+}
+.search-bar input::placeholder{
+    color: #e4e4e4;
+} 
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline:none;
+    border:none;
+    cursor: pointer;
+}
+.search-bar button i{
+    font-size: 22px;
+    color: #e4e4e4;
+}
+#open {
     text-align: center;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding: 0 20px;
+    color: #fff;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.head2 {
+    text-align: center;
+    padding: 20px;
     background-color: rgb(33, 33, 45);
-    margin-left: 50px;
-    margin-right: 50px ;
+    margin: 30px 50px;
     border-radius: 20px;
-
+    color: #fff;
 }
-#prog{
-    padding-left: 50px;
-    padding-right: 50px;
 
-
+#prog {
+    padding: 0 30px;
+    color: #ccc;
 }
-.box1{
+
+.box1 {
     border-radius: 5px;
     padding: 20px;
-    border-width: 5px;
-
-
 }
-#button{
+
+#button {
     text-align: center;
+    margin-top: 15px;
 }
-#but{
+
+#but {
     border-radius: 5px;
 }
-#head2{
+
+#head2 {
     text-align: center;
     padding-bottom: 15px;
     padding-top: 35px;
+    color: #fff;
 }
-.row{
+
+.row {
     margin-left: 35px;
     margin-right: 35px;
 }
-#bomu{
+
+#bomu {
     background-color: rgb(41, 77, 65);
-    padding: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 35px;
-    margin-right: 35px;
+    padding: 20px;
+    margin: 20px 35px;
     border-radius: 20px;
+    color: #fff;
 }
-.card-text{
+
+.card-text {
     font-size: 15px;
 }
-#pen{
+
+#pen {
     background-color: blue;
     border-radius: 10px;
 }
-.pencil{
+
+.pencil {
     padding: 5px;
     border-radius: 5px;
-    border-color: brown;
-    bord
-
+    border: 1px solid brown;
 }
-#ppp{
+
+#ppp {
     background-color: black;
-    padding-top: 5px;
+    padding: 5px 10px;
     border-radius: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-left: 15px;;
-    margin-right: 15px;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+    margin: 5px 15px;
+    color: #fff;
 }
-#tr{
-    width: 60px;
-    height: 60px;
-    transform: translate(10px,13px);
 
-}
-.weee{
-    transform: translate(10px,-38px);
-}
-.lol{
-    padding-left: 30px;
-    padding-right: 30px;
+#tr {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    transform: none;
 }

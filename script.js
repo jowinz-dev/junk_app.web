@@ -15,8 +15,60 @@ if (loginLink && logregBox) {
 
 function handleCredentialResponse(response) {
     console.log("Encoded JWT ID token: " + response.credential);
-    alert("Successfully logged in with Google ^_^");
-    window.location.href = "collector.html";
+    
+    // Optional: Decode the Google JWT payload to get email/name if needed
+    // For simplicity, we parse the base64 payload from the JWT token:
+    let responsePayload = {};
+    try {
+        const base64Url = response.credential.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+        responsePayload = JSON.parse(jsonPayload);
+    } catch (err) {
+        console.error("Failed to parse Google JWT", err);
+    }
+
+    const googleEmail = responsePayload.email || "google_user@ucu.ac.ug";
+    const googleName = responsePayload.name || "Google User";
+
+    // Check if user already exists in usersList
+    let users = JSON.parse(localStorage.getItem("usersList")) || [];
+    let existingUser = users.find(user => user.email === googleEmail);
+
+    let assignedRole = "collector"; // default fallback
+
+    if (existingUser) {
+        // If user exists, use their saved role
+        assignedRole = existingUser.role || "collector";
+        localStorage.setItem("currentUser", existingUser.name);
+        localStorage.setItem("userRole", assignedRole);
+    } else {
+        // If it's a new user via Google, check if they selected a role on your register dropdown, or default to collector
+        const roleSelect = document.getElementById('user-role-select');
+        if (roleSelect && roleSelect.value) {
+            assignedRole = roleSelect.value;
+        }
+
+        // Push into usersList so it matches your local DB structure
+        users.push({ name: googleName, email: googleEmail, password: "GOOGLE_OAUTH_USER", role: assignedRole });
+        localStorage.setItem("usersList", JSON.stringify(users));
+        localStorage.setItem("currentUser", googleName);
+        localStorage.setItem("userRole", assignedRole);
+    }
+
+    // Set login flag
+    localStorage.setItem("isLoggedIn", "true");
+    
+    alert(`Successfully signed in with Google as ${googleName} ^_^`);
+
+    // Route based on role
+    if (assignedRole === "producer") {
+        window.location.href = "waste.html";
+    } else {
+        window.location.href = "collector.html";
+    }
 }
 
 // Handle Login Form Submission
@@ -50,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return response.text();
         })
         .then(data => {
-            const placeholder = document.getElementById("navbar_placeholder");
+            const placeholder = document.getElementById("sitenav");
             if (placeholder) {
                 placeholder.innerHTML = data;
                 

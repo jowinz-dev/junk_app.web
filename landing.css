@@ -51,15 +51,15 @@ body {
 }
 
 
-.navbar a{
+.sitenav a{
     font-size: 16px;
     color: #e4e4e4;
     text-decoration: none;
     font-weight: 500;
-    margin-right:110px;
+    margin-right:50px;
     margin-left:auto;
 }
-.navbar a::after{
+.sitenav a::after{
     content: '';
     position: absolute;
     left:0;
@@ -72,9 +72,47 @@ body {
     opacity: 0;
     transition: .5s;
 }
-.navbar a:hover::after{
+.sitenav a:hover::after{
     transform: translateY(0px);
     opacity: 1;
+}
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+.search-bar input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    padding:0 15px;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding-left: 10px;
+}
+.search-bar input::placeholder{
+    color: #e4e4e4;
+} 
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline:none;
+    border:none;
+    cursor: pointer;
+}
+.search-bar button i{
+    font-size: 22px;
+    color: #e4e4e4;
 }
 main
 .herocont{
