@@ -7,7 +7,7 @@
 }
 
 body {
-    background-image:linear-gradient(rgba(255, 255, 255, 0.00), rgba(255, 255, 255, 0.00)),url('garden trash can.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url('garden trash can.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
