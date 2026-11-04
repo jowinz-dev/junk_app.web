@@ -55,3 +55,15 @@ requests.forEach(function(request) {
         </div>
     `;
 });
+
+    if (collectionHistory.length === 0) {
+        historyEmpty.style.display = "block";
+    } else {
+        historyEmpty.style.display = "none";
+    }
+updateStatistics();
+displayRequests();
+displayAcceptedRequests();
+displayHistory();
+document.getElementById("confirm-collection").addEventListener("click", confirmCollection);
+document.getElementById("quality").addEventListener("change", updatePointsPreview);
