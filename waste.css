@@ -163,6 +163,7 @@ body {
 }
 .sidebar.active {
     left: 0;
+    padding:120px;
 }
 .history-box {
     grid-column: 2;
@@ -180,7 +181,7 @@ body {
     grid-column: 1 / span 3;
     grid-row: 4;
 }
-.welcome-box h2 { font-size: 1.4rem; margin-bottom: 5px; }
+.welcome-box h2 { font-size: 1.4rem; margin-top:120px; margin-bottom: 5px; }
 .welcome-box p { font-size: 0.95rem; color: #cbd5e1; }
 .history-box h3 { margin-bottom: 12px; font-size: 1.1rem; }
 
