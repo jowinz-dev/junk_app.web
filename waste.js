@@ -66,13 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
             // Build request item structure
             const collectionRequest = {
                 id: "REQ-" + Date.now(), 
+                producerName: localStorage.getItem("userName") ||  "Producer",
                 date: new Date().toLocaleDateString(),
                 category: selectedCategory,
                 status: "Pending",
                 points: 0, // Stays 0 until collector verification
-                scheduledDay: pickupDay,
-                potentialPoints: isSortedActive ? 15 : 5 
-            };
+ scheduledDay: pickupDay,
+potentialPoints: isSortedActive ? 50 : 0
+};
 
             // Save entry to localStorage array matrix
             let requestHistory = JSON.parse(localStorage.getItem("globalCollectionHistory")) || [];
