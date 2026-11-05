@@ -71,8 +71,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 category: selectedCategory,
                 status: "Pending",
                 points: 0, // Stays 0 until collector verification
-                scheduledDay: pickupDay,
-            };
+ scheduledDay: pickupDay,
+potentialPoints: isSortedActive ? 50 : 0
+};
 
             // Save entry to localStorage array matrix
             let requestHistory = JSON.parse(localStorage.getItem("globalCollectionHistory")) || [];
