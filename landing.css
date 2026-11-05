@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-image:url('bin1.jpeg');
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow-x: hidden;
+}
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    background: rgba(1, 74, 38, 0.349); 
+    backdrop-filter: blur(8px); /* Creates a sleek frosted-glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff6b00; /* Main Orange color */
+  letter-spacing: 1px;
+}
+.logo span {
+  color: #ffffff; /* Contrast accent for logo */
+}
+body {
+    background-image:url('bin1.jpeg');
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* Centers your card horizontally */
+    justify-content: center;  /* Centers everything nicely on the screen */
+    margin: 0;
+    overflow-x: hidden;
+    padding-top: 80px;        /* Adds breathing room below the fixed header */
+    padding-bottom: 40px;
+}
+
+
+.sitenav a{
+    font-size: 16px;
+    color: #e4e4e4;
+    text-decoration: none;
+    font-weight: 500;
+    margin-right:50px;
+    margin-left:auto;
+}
+.sitenav a::after{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:-6px;
+    width:100%;
+    height:2px;
+    background: #e4e4e4;
+    border-radius: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: .5s;
+}
+.sitenav a:hover::after{
+    transform: translateY(0px);
+    opacity: 1;
+}
+.search-bar{
+    width: 250px;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+.search-bar input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border:none;
+    outline:none;
+    padding:0 15px;
+    font-size: 16px;
+    color: #e4e4e4;
+    padding-left: 10px;
+}
+.search-bar input::placeholder{
+    color: #e4e4e4;
+} 
+.search-bar button{
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline:none;
+    border:none;
+    cursor: pointer;
+}
+.search-bar button i{
+    font-size: 22px;
+    color: #e4e4e4;
+}
+main
+.herocont{
+  width: 100%;
+  background:linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url('likely1.jpeg');
+  background-position:center;
+  background-size:cover;
+  height:100vh;
+}
+.scont{
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;    
+}
+.slides-track {
+  display: flex;
+  width: 300%; /* 3 slides = 300% width */
+  animation: slideShow 90s cubic-bezier(0.65,0,0.35,1) infinite;
+}
+
+/* Individual slide styling */
+.slide {
+  width:33.3333%;
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+.slide h1 {
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.slide h1 span {
+  color: #ff6b00;
+}
+.slide p {
+  font-size: 1rem;
+  color: #d1d5db;
+  line-height: 1.6;
+  max-width: 580px;
+  margin-bottom: 2rem;  
+}
+/* ---------------- BUTTON ---------------- */
+.btn-green {
+  display: inline-block;
+  padding: 12px 32px;
+  background: #208023;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-green:hover {
+  background: #05a33f;
+  transform: translateY(-2px);
+}
+@keyframes slideShow {
+  0%   { transform: translateX(0%); }
+  31%  { transform: translateX(0%); }
+  
+  33.33%  { transform: translateX(-33.333%); }
+  64.33%  { transform: translateX(-33.333%); }
+  
+  66.66%  { transform: translateX(-66.666%); }
+  97.66%  { transform: translateX(-66.666%); }
+  
+  100% { transform: translateX(0%); }
+}
+
+.footer {
+    margin-top: auto;
+    color: #e4e4e4;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+}
