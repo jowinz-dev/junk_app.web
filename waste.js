@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 status: "Pending",
                 points: 0, // Stays 0 until collector verification
                 scheduledDay: pickupDay,
-                potentialPoints: isSortedActive ? 15 : 5 
+                potentialPoints: isSortedActive ? 50 : 0
             };
 
             // Save entry to localStorage array matrix
