@@ -27,9 +27,9 @@
 }
 body {
     background-position:absolute;
-    background-repeat:no-repeat;
+    background-repeat:repeat;
     background-image:url('pt2.jpeg');
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(10px);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -116,15 +116,15 @@ body {
 .head2 {
     text-align: center;
     padding: 20px;
-    background-color: rgb(33, 33, 45);
+    background-color: #efebeb;
     margin: 30px 50px;
     border-radius: 20px;
-    color: #fff;
+    color: #0e0e0e;
 }
 
 #prog {
     padding: 0 30px;
-    color: #ccc;
+    color: #201e1e;
 }
 
 .box1 {
@@ -144,7 +144,7 @@ body {
 #head2 {
     text-align: center;
     padding-bottom: 15px;
-    padding-top: 35px;
+    padding-top: 20px;
     color: #fff;
 }
 
@@ -155,14 +155,19 @@ body {
 
 #bomu {
     background-color: rgb(74, 104, 74);
-    padding: 20px;
+    padding: 15px;
     margin: 20px 35px;
     border-radius: 20px;
     color: #fff;
+    padding-bottom: 20px;
 }
 
 .card-text {
     font-size: 15px;
+    color: #0e0e0e;
+}
+.card-title{
+    color: rgb(15, 81, 15);
 }
 
 #pen {
@@ -177,7 +182,7 @@ body {
 }
 
 #ppp {
-    background-color: black;
+    background-color: rgb(20, 0, 0);
     padding: 5px 10px;
     border-radius: 10px;
     margin: 5px 15px;
@@ -191,11 +196,17 @@ body {
     transform: none;
 }
 .card-body{
-    background-color: rgb(15, 81, 15);
+    background-color: rgb(219, 230, 219);
     border-radius: 10px;
     border: 3px solid;
-    border-color: rgb(36, 35, 35);
+    border-color: rgb(146, 150, 146)
 }
 .em{
-    background-color: rgb(26, 27, 26)
+    background-color: rgb(219, 230, 219);
+}
+.man{
+    background-image: url(part.jpeg);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 15px;
 }
