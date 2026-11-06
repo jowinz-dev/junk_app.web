@@ -94,7 +94,7 @@ potentialPoints: isSortedActive ? 50 : 0
         const noDataText = document.querySelector(".no-data");
         const historyTable = document.querySelector(".history-table");
 
-        const totalPoints = localStorage.getItem("totalUserPoints") || "0";
+        const totalPoints = localStorage.getItem("pickup day") || "0";
         if (pointsDisplay) pointsDisplay.textContent = `${totalPoints} Pts`;
 
         const savedHistory = JSON.parse(localStorage.getItem("globalCollectionHistory")) || [];
