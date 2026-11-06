@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Fetch current selected scheduled day text safely
             let pickupDay = "Not Scheduled";
-            const daySelector = document.querySelector(".schedule-box select") || document.querySelector("select");
+            const daySelector = document.getElementById("days");
             if (daySelector) {
-                pickupDay = daySelector.options[daySelector.selectedIndex].text;
+                pickupDay = daySelector.value;
             }
 
             // Build request item structure
@@ -94,7 +94,7 @@ potentialPoints: isSortedActive ? 50 : 0
         const noDataText = document.querySelector(".no-data");
         const historyTable = document.querySelector(".history-table");
 
-        const totalPoints = localStorage.getItem("pickup day") || "0";
+        const totalPoints = localStorage.getItem("totaluserpoints") || "0";
         if (pointsDisplay) pointsDisplay.textContent = `${totalPoints} Pts`;
 
         const savedHistory = JSON.parse(localStorage.getItem("globalCollectionHistory")) || [];
