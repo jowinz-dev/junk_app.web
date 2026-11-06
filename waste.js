@@ -175,3 +175,8 @@ window.addEventListener('click', function(e) {
       toggleBtn.addEventListener('click', () => {
       menu.classList.toggle('collapsed');
     });
+
+    // INITIAL DASHBOARD DISPLAY
+    
+
+
