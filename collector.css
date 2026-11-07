@@ -124,15 +124,6 @@ body {
     filter: blur(2px);
     z-index: -1;
 }
-/*Background text*/
-.collector-page .card h1,
-.collector-page .card h2,
-.collector-page .card h3,
-.collector-page .card h4,
-.collector-page .card h5 {
-    color: #212529;
-    text-shadow: none;
-}
 footer{
     color:white;
 }
