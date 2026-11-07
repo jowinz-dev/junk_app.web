@@ -109,8 +109,32 @@ body {
     justify-content: center;
     flex-shrink: 0;
 }
-.container-fluid py-4{
+.container-fluid.py-4{
     position:relative;
+}
+/* background styling*/
+.collector-page::before{
+    content: "";
+    background-image: url('pc1.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    inset: 0;
+    background-size: cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+/*Background text*/
+.collector-page .card h1,
+.collector-page .card h2,
+.collector-page .card h3,
+.collector-page .card h4,
+.collector-page .card h5 {
+    color: #212529;
+    text-shadow: none;
+}
+footer{
+    color:white;
 }
 .stats-icon img {
     width: 100%;
@@ -127,4 +151,5 @@ body {
     border-radius: 20px;
     font-weight: 600;
 }
+
 
