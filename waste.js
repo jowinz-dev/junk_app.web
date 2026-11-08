@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!localStorage.getItem("historyCleanedV2")) {
         localStorage.removeItem("globalCollectionHistory");
         localStorage.setItem("historyCleanedV2", "true");
-    }
-
+    }   
     // === 1. NAVIGATION & EXTERNAL PAGE ROUTING ===
     const sidebarDropdown = document.querySelector(".sidebar-dropdown");
     if (sidebarDropdown) {
@@ -16,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
     // === 2. WASTE LOGGING & CATEGORY SELECTION ===
     const wasteSelect = document.querySelector(".log-waste-box select") || document.querySelector("select[name='waste_category']"); 
     const unsortedRadio = document.querySelector("input[type='radio']"); // Targets your single radio button element
@@ -29,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 wasteSelect.style.opacity = "0.5";
             }
         });
-        
         // If user clicks on the dropdown list, automatically uncheck the Unsorted radio option
         if (wasteSelect) {
             wasteSelect.addEventListener("click", () => {
@@ -39,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
-
     // === 3. PERSISTING DATA ACROSS PAGES ===
     const submitBtn = document.querySelector(".submit-btn");
 
@@ -55,14 +51,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (isSortedActive && wasteSelect) {
                 selectedCategory = "Sorted: " + wasteSelect.options[wasteSelect.selectedIndex].text;
             }
-
             // Fetch current selected scheduled day text safely
             let pickupDay = "Not Scheduled";
-            const daySelector = document.querySelector(".schedule-box select") || document.querySelector("select");
+            const daySelector = document.getElementById("days");
             if (daySelector) {
-                pickupDay = daySelector.options[daySelector.selectedIndex].text;
+                pickupDay = daySelector.value;
             }
-
             // Build request item structure
             const collectionRequest = {
                 id: "REQ-" + Date.now(), 
@@ -71,10 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 category: selectedCategory,
                 status: "Pending",
                 points: 0, // Stays 0 until collector verification
+<<<<<<< HEAD
+                scheduledDay: pickupDay,
+                potentialPoints: isSortedActive ? 50 : 0
+            };
+=======
  scheduledDay: pickupDay,
 potentialPoints: isSortedActive ? 50 : 0
 };
 
+>>>>>>> 417d93433a169e55c0c6ceadfd209149b7e7e584
             // Save entry to localStorage array matrix
             let requestHistory = JSON.parse(localStorage.getItem("globalCollectionHistory")) || [];
             requestHistory.unshift(collectionRequest); 
@@ -87,14 +87,13 @@ potentialPoints: isSortedActive ? 50 : 0
             updateDashboardUI();
         });
     }
-
     // === 4. DYNAMIC INTERFACE SYNCHRONIZATION ===
     function updateDashboardUI() {
         const pointsDisplay = document.querySelector(".points-display") || document.querySelector(".sidebar p"); 
         const noDataText = document.querySelector(".no-data");
         const historyTable = document.querySelector(".history-table");
 
-        const totalPoints = localStorage.getItem("totalUserPoints") || "0";
+        const totalPoints = localStorage.getItem("totaluserpoints") || "0";
         if (pointsDisplay) pointsDisplay.textContent = `${totalPoints} Pts`;
 
         const savedHistory = JSON.parse(localStorage.getItem("globalCollectionHistory")) || [];
@@ -131,7 +130,6 @@ function toggleDropdownList() {
     const list = document.getElementById("sidebarContent");
     list.classList.toggle("hidden");
 }
-
 // Updates the text inside the selector box and tracks active status
 function selectOption(val, event) {
     if (event) event.preventDefault(); // Prevents page reload jump
@@ -143,11 +141,9 @@ function selectOption(val, event) {
         el.classList.remove("active");
         if(el.innerText === val) el.classList.add("active");
     });
-    
     // Smoothly closes the menu list after selection
     toggleDropdownList();
 }
-
 // Closes the menu automatically if the user clicks anywhere outside of it
 window.addEventListener('click', function(e) {   
     const wrapper = document.querySelector('.dropdown-wrapper');
@@ -165,7 +161,6 @@ window.addEventListener('click', function(e) {
             dynamicPanel.classList.add("hidden");
         });
     }
-
     // Initial load setup sync execution
     updateDashboardUI();
 });
@@ -175,3 +170,8 @@ window.addEventListener('click', function(e) {
       toggleBtn.addEventListener('click', () => {
       menu.classList.toggle('collapsed');
     });
+
+    // INITIAL DASHBOARD DISPLAY
+    
+
+

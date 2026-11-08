@@ -9,14 +9,9 @@
     <link rel="stylesheet" href="collector.css">
     <script src="script.js" defer></script>
 </head>
-<body>
-    <header class="header">
-      <div class="logo">Junk<span>App</span></div>
+<body class="collector-page">
+    <header class="header">>
       <div id="sitenav"></div>
-        <form action="#" class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button type="submit"><i class='bx bx-search'></i></button>
-        </form>
     </header> 
 
     <!-- MAIN DASHBOARD -->
@@ -25,13 +20,13 @@
             <!-- SIDEBAR -->
             <aside class="col-md-3">
                 <div>
-                    <h5>Collector Menu</h5>
+                    <h5 class="text-white">Collector Menu</h5>
                     <ul class="list-group mb-4">
-                        <li class="list-group-item"><a href="#dashboard" class="text-decoration-none">Dashboard</a></li>
-                        <li class="list-group-item"><a href="#requests" class="text-decoration-none">Pickup Requests</a></li>
-                        <li class="list-group-item"><a href="#sorting" class="text-decoration-none">Sorting and JunkPts</a></li>
-                        <li class="list-group-item"><a href="#history" class="text-decoration-none">Collection History</a></li>
-                        <li class="list-group-item"><a href="#profile" class="text-decoration-none">Collector Profile</a></li>
+                        <li class="list-group-item"><a href="#dashboard" class="text-decoration-none text-dark">Dashboard</a></li>
+                        <li class="list-group-item"><a href="#requests" class="text-decoration-none text-dark">Pickup Requests</a></li>
+                        <li class="list-group-item"><a href="#sorting" class="text-decoration-none text-dark">Sorting and JunkPts</a></li>
+                        <li class="list-group-item"><a href="#history" class="text-decoration-none text-dark">Collection History</a></li>
+                        <li class="list-group-item"><a href="#profile" class="text-decoration-none text-dark">Collector Profile</a></li>
                     </ul>
                     <div class="card">
                         <div class="card-body">
@@ -58,7 +53,7 @@
 <!-- DASHBOARD STATISTICS -->
 <div class="col-lg-5">
     <section class="stats-section">
-        <h3>Dashboard Statistics</h3>
+        <h3 class="text-white">Dashboard Statistics</h3>
         <div class="row g-2">
         <div class="col-md-6">
             <div class="card h-100">
@@ -114,8 +109,8 @@
                 <section class="requests-section mt-4" id="requests">
                     <div class="section-heading">
                         <div>
-                            <h2>Pickup Requests</h2>
-                            <p>Review requests submitted by producers.</p>
+                            <h2 class="text-white">Pickup Requests</h2>
+                            <p class="text-white">Review requests submitted by producers.</p>
                         </div>
                         <span id="request-count" class="request-count">
                             <img src="clock.png" alt="Pending" width="18" height="18">
@@ -127,7 +122,7 @@
                 </section>
                 <!-- SORTING AND JUNK POINTS -->
                 <section class="sorting-section mt-4" id="sorting">
-                    <h4>Sorting and Junk Points</h4>
+                    <h4 class="text-white">Sorting and Junk Points</h4>
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Confirm Waste Sorting</h5>
@@ -151,11 +146,13 @@
 <button type="button" class="btn btn-success" id="confirm-collection">
     Confirm Collection and Award Points
 </button>
+                </div>
+                </div>
                 </section>
                 <!-- COLLECTION HISTORY -->
                 <section class="history-section mt-4" id="history">
-                    <h4>Collection History</h4>
-                    <p>View your previously completed collections.</p>
+                    <h4 class="text-white">Collection History</h4>
+                    <p class="text-white">View your previously completed collections.</p>
                     <div class="table-responsive">
                         <table class="table table-striped table-hover">
                             <thead>
@@ -169,12 +166,12 @@
                             <!-- JavaScript will add completed collections here -->
                             <tbody id="history-body"></tbody>
                         </table>
-                        <p id="history-empty" class="text-muted">No completed collections yet.</p>
+                        <p id="history-empty" class="text-white">No completed collections yet.</p>
                     </div>
                 </section>
                 <!-- COLLECTOR PROFILE -->
                 <section class="profile-section mt-4" id="profile">
-                    <h3>Collector Profile</h3>
+                    <h3 class="text-white">Collector Profile</h3>
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Personal Information</h5>
@@ -190,10 +187,7 @@
             </div>
         </div>
     </main>
-    <!-- FOOTER -->
-    <footer class="text-center mt-4 py-3">
-        <p>Junk App &copy; 2026 | A cleaner environment starts here with you</p>
-    </footer>
+    <div id="sitefoot"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="collector.js"></script>

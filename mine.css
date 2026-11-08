@@ -1,127 +1,41 @@
 
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 8%;
-    background: rgba(1, 74, 38, 0.349); 
-    backdrop-filter: blur(8px); /* Creates a sleek frosted-glass effect */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: #ff6b00; /* Main Orange color */
-  letter-spacing: 1px;
-}
-.logo span {
-  color: #ffffff; /* Contrast accent for logo */
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
     background-position:absolute;
-    background-repeat:no-repeat;
+    background-repeat:repeat;
     background-image:url('pt2.jpeg');
-    backdrop-filter:blur(20px);
+    backdrop-filter:blur(10px);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;      /* Centers your card horizontally */
     justify-content: center;  /* Centers everything nicely on the screen */
     margin: 0;
-    overflow-x: hidden;
     padding-top: 80px;        /* Adds breathing room below the fixed header */
     padding-bottom: 40px;
 }
 
-
-.sitenav a{
-    font-size: 16px;
-    color: #e4e4e4;
-    text-decoration: none;
-    font-weight: 500;
-    margin-right:50px;
-    margin-left:auto;
-}
-.sitenav a::after{
-    content: '';
-    position: fixed;
-    left:0;
-    bottom:-6px;
-    width:100%;
-    height:2px;
-    background: #e4e4e4;
-    border-radius: 5px;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: .5s;
-}
-.sitenav a:hover::after{
-    transform: translateY(0px);
-    opacity: 1;
-}
-.search-bar{
-    width: 250px;
-    height: 45px;
-    background: transparent;
-    border: 2px solid #e4e4e4;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-}
-.search-bar input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border:none;
-    outline:none;
-    padding:0 15px;
-    font-size: 16px;
-    color: #e4e4e4;
-    padding-left: 10px;
-}
-.search-bar input::placeholder{
-    color: #e4e4e4;
-} 
-.search-bar button{
-    width: 40px;
-    height: 100%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    outline:none;
-    border:none;
-    cursor: pointer;
-}
-.search-bar button i{
-    font-size: 22px;
-    color: #e4e4e4;
-}
-#open {
+open {
     text-align: center;
-    padding: 0 20px;
     color: #fff;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 15px auto;
+    font-size: 18px;
 }
 
 .head2 {
     text-align: center;
     padding: 20px;
-    background-color: rgb(33, 33, 45);
+    background-color: #efebeb;
     margin: 30px 50px;
     border-radius: 20px;
-    color: #fff;
+    color: #0e0e0e;
 }
 
 #prog {
     padding: 0 30px;
-    color: #ccc;
+    color: #201e1e;
 }
 
 .box1 {
@@ -141,7 +55,7 @@ body {
 #head2 {
     text-align: center;
     padding-bottom: 15px;
-    padding-top: 35px;
+    padding-top: 20px;
     color: #fff;
 }
 
@@ -151,15 +65,20 @@ body {
 }
 
 #bomu {
-    background-color: rgb(41, 77, 65);
-    padding: 20px;
+    background-color: rgb(74, 104, 74);
+    padding: 15px;
     margin: 20px 35px;
     border-radius: 20px;
     color: #fff;
+    padding-bottom: 20px;
 }
 
 .card-text {
     font-size: 15px;
+    color: #0e0e0e;
+}
+.card-title{
+    color: rgb(15, 81, 15);
 }
 
 #pen {
@@ -174,7 +93,7 @@ body {
 }
 
 #ppp {
-    background-color: black;
+    background-color: rgb(20, 0, 0);
     padding: 5px 10px;
     border-radius: 10px;
     margin: 5px 15px;
@@ -186,4 +105,19 @@ body {
     height: 45px;
     object-fit: contain;
     transform: none;
+}
+.card-body{
+    background-color: rgb(219, 230, 219);
+    border-radius: 10px;
+    border: 3px solid;
+    border-color: rgb(146, 150, 146)
+}
+.em{
+    background-color: rgb(219, 230, 219);
+}
+.man{
+    background-image: url(part.jpeg);
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 15px;
 }
