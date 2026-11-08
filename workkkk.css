@@ -154,7 +154,6 @@
   text-align: center;
   flex-shrink: 0;
 }
-
 .team-card .avatar-wrapper {
   width: 85px;
   height: 85px;
@@ -183,7 +182,6 @@
   margin-right: auto;
   max-width: 100%;
 }
-
 .team-name {
   font-family: 'Lato',sans-serif;
   font-weight: 900;

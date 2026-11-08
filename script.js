@@ -145,8 +145,20 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
         .catch(error => console.error("Error loading navbar:", error));
+// 2. Fetch and Load Footer (NEW)
+    fetch("footer.html")
+        .then(response => {
+            if (!response.ok) throw new Error("Footer network response was not ok");
+            return response.text();
+        })
+        .then(data => {
+            const footerPlaceholder = document.getElementById("sitefoot");
+            if (footerPlaceholder) {
+                footerPlaceholder.innerHTML = data;
+            }
+        })
+        .catch(error => console.error("Error loading footer:", error));
 });
-
 // Handle Sign Up Form Submission
 const registerForm = document.querySelector('.form-box.register form');
 if (registerForm) {

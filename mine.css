@@ -1,38 +1,9 @@
 
-<<<<<<< Updated upstream
-.header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 8%;
-    background: rgba(1, 74, 38, 0.349); 
-    backdrop-filter: blur(8px); /* Creates a sleek frosted-glass effect */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-#headdd{
-    margin-top: 5px;
-}
-.logo {
-  font-size: 28px;
-  font-weight: 700;
-  color: #ff6b00; /* Main Orange color */
-  letter-spacing: 1px;
-}
-.logo span {
-  color: #ffffff; /* Contrast accent for logo */
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 body {
     background-position:absolute;
     background-repeat:repeat;
-=======
-body {
-    background-position:absolute;
->>>>>>> Stashed changes
     background-image:url('pt2.jpeg');
     backdrop-filter:blur(10px);
     min-height: 100vh;
@@ -41,7 +12,6 @@ body {
     align-items: center;      /* Centers your card horizontally */
     justify-content: center;  /* Centers everything nicely on the screen */
     margin: 0;
-    overflow-x: hidden;
     padding-top: 80px;        /* Adds breathing room below the fixed header */
     padding-bottom: 40px;
 }
