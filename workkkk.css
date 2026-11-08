@@ -113,7 +113,7 @@
 
 
 .values-ribbon {
-  background: #a8d5b0;
+  background: #cfea8a;
   border-radius: 20px;
   display:flex;
   flex-direction: row;
@@ -127,7 +127,7 @@
   width: fit-content;
   font-size: 18px;
   font-weight: 500;
-  color: #1a2e05;
+  color: black;
   position: relative;
   z-index: 2;
   margin: 0 auto -75px auto;
