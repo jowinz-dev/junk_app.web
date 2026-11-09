@@ -25,9 +25,10 @@ body {
     gap: 20px;
     max-width: 1400px;
     justify-content: start;
-    justify-item: start;
+    justify-items: start;
     width: 100%;
-    margin: 0 auto;
+    margin-left:0;
+    margin-right:auto;
 }
 .sidebar,.history-box, .request-box, .log-waste-box {
     background: #2b303a; 
