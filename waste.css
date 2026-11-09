@@ -7,7 +7,7 @@
 }
 .log-waste-box {
     grid-column: 2 / span 2;
-    width: 100%;             
+    width: 80%;             
     box-sizing: border-box;  
 }
 body {
@@ -26,7 +26,7 @@ body {
     max-width: 1400px;
     justify-content: start;
     justify-items: start;
-    width: 100%;
+    width: 80%;
     margin-left:0;
     margin-right:auto;
 }
@@ -79,7 +79,7 @@ body {
 flex-grow: 1; 
 }
 .history-table {
- width: 100%;
+ width: 80%;
  border-collapse: collapse;
  }
 .history-table th {
@@ -148,7 +148,7 @@ flex-direction: column;
     background: #3f4756;
     color: white;
     border: 1px solid #4b5563;
-    width: 100%;
+    width: 80%;
     max-width: 400px;
 }
 .form-group-radio { margin-top: 5px; }
