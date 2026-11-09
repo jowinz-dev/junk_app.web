@@ -20,7 +20,7 @@ body {
 
 .dashboard-container {
     display: grid;
-    grid-template-columns:20px 1fr 1fr;
+    grid-template-columns:240px 1fr 1fr;
     grid-template-rows: min-content minmax(220px, auto) min-content min-content;
     gap: 20px;
     max-width: 1400px;
@@ -53,6 +53,29 @@ body {
     font-size: 1.1rem;    
     font-weight: 500;      
     color: #e2e8f0;        
+}
+.sidebar {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    align-self: start;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100vh;
+    transition: left 0.3s ease;
+    z-index: 999;
+    flex-direction: column;
+    gap: 15px;
+}
+.sidebar.active {
+    left: 0;
+    padding:120px;
 }
 .history-box {
     grid-column: 2;
