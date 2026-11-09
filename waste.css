@@ -30,7 +30,7 @@ body {
     margin-left:0;
     margin-right:auto;
 }
-.sidebar,.history-box, .request-box, .log-waste-box {
+.history-box, .request-box, .log-waste-box {
     background: #2b303a; 
     border: 1px solid #3f4756;
     border-radius: 8px;
@@ -53,29 +53,6 @@ body {
     font-size: 1.1rem;    
     font-weight: 500;      
     color: #e2e8f0;        
-}
-.sidebar {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    align-self: start;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: -250px; 
-    width: 250px;
-    height: 100vh;
-    transition: left 0.3s ease;
-    z-index: 999;
-    flex-direction: column;
-    gap: 15px;
-}
-.sidebar.active {
-    left: 0;
-    padding:120px;
 }
 .history-box {
     grid-column: 2;
