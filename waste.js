@@ -45,13 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let selectedCategory = "Unsorted Waste";
             
-            // FIX: If the Unsorted radio button is NOT checked, it means Sorted is active!
+            //  If the Unsorted radio button is NOT checked, it means Sorted is active!
             const isSortedActive = unsortedRadio ? !unsortedRadio.checked : true;
 
             if (isSortedActive && wasteSelect) {
                 selectedCategory = "Sorted: " + wasteSelect.options[wasteSelect.selectedIndex].text;
             }
-            // Fetch current selected scheduled day text safely
+            // this fetches the currently selected scheduled day text safely
             let pickupDay = "Not Scheduled";
             const daySelector = document.getElementById("days");
             if (daySelector) {
@@ -64,17 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 date: new Date().toLocaleDateString(),
                 category: selectedCategory,
                 status: "Pending",
-                points: 0, // Stays 0 until collector verification
-<<<<<<< HEAD
+                points: 0, // Your point stays 0 until collector verification
                 scheduledDay: pickupDay,
                 potentialPoints: isSortedActive ? 50 : 0
             };
-=======
- scheduledDay: pickupDay,
-potentialPoints: isSortedActive ? 50 : 0
-};
-
->>>>>>> 417d93433a169e55c0c6ceadfd209149b7e7e584
             // Save entry to localStorage array matrix
             let requestHistory = JSON.parse(localStorage.getItem("globalCollectionHistory")) || [];
             requestHistory.unshift(collectionRequest); 
@@ -110,14 +103,14 @@ potentialPoints: isSortedActive ? 50 : 0
                 const tr = document.createElement("tr");
                 
                 // Color code statuses dynamically (Orange for Pending, Green for Confirmed)
-                const statusColor = item.status === "Pending" ? "#f59e0b" : "#10b981";
+                const statusColor = item.status === "Pending" ? "gold" : "#seagreen";
                 
                 // FIXED LAYOUT: Added extensive right padding, line-height, and vertical alignment
                 tr.innerHTML = `
-                    <td style="padding: 12px 15px 12px 0; color: #cbd5e1; border-bottom: 1px solid #3f4756; vertical-align: top; white-space: nowrap;">${item.date}</td>
-                    <td style="padding: 12px 25px 12px 0; color: #ffffff; border-bottom: 1px solid #3f4756; vertical-align: top; line-height: 1.4;">${item.category}</td>
-                    <td style="padding: 12px 20px 12px 0; color: ${statusColor}; font-weight: bold; border-bottom: 1px solid #3f4756; vertical-align: top;">${item.status}</td>
-                    <td style="padding: 12px 0; color: #cbd5e1; border-bottom: 1px solid #3f4756; vertical-align: top; text-align: right;">+${item.points}</td>
+                    <td style="padding: 12px 15px 12px 0; color: #lightgray; border-bottom: 1px solid darkslategrey; vertical-align: top; white-space: nowrap;">${item.date}</td>
+                    <td style="padding: 12px 25px 12px 0; color: white; border-bottom: 1px solid darkslategrey; vertical-align: top; line-height: 1.4;">${item.category}</td>
+                    <td style="padding: 12px 20px 12px 0; color: ${statusColor}; font-weight: bold; border-bottom: 1px solid darkslategrey; vertical-align: top;">${item.status}</td>
+                    <td style="padding: 12px 0; color: #cbd5e1; border-bottom: 1px solid darkslategrey; vertical-align: top; text-align: right;">+${item.points}</td>
                 `;
                 historyTable.appendChild(tr);
             });
