@@ -7,7 +7,7 @@
 }
 .log-waste-box {
     grid-column: 2 / span 2;
-    width: 100%;             
+    width: 80%;             
     box-sizing: border-box;  
 }
 body {
@@ -16,7 +16,7 @@ body {
     background-position: center;
     background-attachment: fixed;
      padding:120px 20px 20px 20px; 
-    color: #ffffff; }
+    color: white; }
 
 .dashboard-container {
     display: grid;
@@ -24,16 +24,13 @@ body {
     grid-template-rows: min-content minmax(220px, auto) min-content min-content;
     gap: 20px;
     max-width: 1400px;
-    width: 100%;
-    margin: 0 auto;
+    justify-content: start;
+    justify-items: start;
+    width: 80%;
+    margin-left:0;
+    margin-right:auto;
 }
-.sidebar,.history-box, .request-box, .log-waste-box {
-    background: #2b303a; 
-    border: 1px solid #3f4756;
-    border-radius: 8px;
-    padding: 20px;
-}
-.sidebar,.history-box, .request-box, .log-waste-box {
+.history-box, .request-box, .log-waste-box {
     background: #2b303a; 
     border: 1px solid #3f4756;
     border-radius: 8px;
@@ -49,36 +46,13 @@ body {
     font-size: 2.2rem;       
     font-weight: 800;     
     margin-bottom: 8px;
-    color: #ffffff;
+    color: white;
     letter-spacing: -0.5px;
 }
 .welcome-text-bg p {
     font-size: 1.1rem;    
     font-weight: 500;      
-    color: #e2e8f0;        
-}
-.sidebar {
-    background: transparent !important;
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    align-self: start;
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: -250px; 
-    width: 250px;
-    height: 100vh;
-    transition: left 0.3s ease;
-    z-index: 999;
-    flex-direction: column;
-    gap: 15px;
-}
-.sidebar.active {
-    left: 0;
-    padding:120px;
+    color: lavender;        
 }
 .history-box {
     grid-column: 2;
@@ -105,15 +79,15 @@ body {
 flex-grow: 1; 
 }
 .history-table {
- width: 100%;
+ width: 80%;
  border-collapse: collapse;
  }
 .history-table th {
     text-align: left;
-    border-bottom: 1px solid #4b5563;
+    border-bottom: 1px solid dimgrey;
     padding: 8px 4px;
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: lightslategrey;
     position: sticky;
     top: 0;
     background: #2b303a;
@@ -123,7 +97,7 @@ flex-grow: 1;
 font-size: 0.88rem; 
 border-bottom: 1px solid #3f4756;
  }
-.status-pending { color: #fbbf24; font-weight: bold; }
+.status-pending { color: gold; font-weight: bold; }
 .request-form { 
 display: flex; 
 flex-direction: column;
@@ -138,14 +112,14 @@ align-items: center;
 .schedule-row select {
     padding: 6px 12px;
     border-radius: 4px;
-    background: #3f4756;
+    background: darkslategrey;
     color: white;
-    border: 1px solid #4b5563;
+    border: 1px solid dimgrey;
 }
 .submit-btn {
     flex-grow: 0.5;
     width: 40%;
-    background-color: #008711;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 8px;
@@ -174,7 +148,7 @@ flex-direction: column;
     background: #3f4756;
     color: white;
     border: 1px solid #4b5563;
-    width: 100%;
+    width: 80%;
     max-width: 400px;
 }
 .form-group-radio { margin-top: 5px; }
@@ -184,21 +158,6 @@ align-items: center;
 gap: 8px; 
 cursor: pointer;
 font-size: 0.95rem; }
-
-.sidebar-header {
- background: transparent !important;
- background-color: transparent !important;
- border: none !important;
- box-shadow: none !important;
- display: flex; 
-justify-content: space-between; 
-align-items: center;
- }
-.menu-label { font-size: 0.85rem; 
-font-weight: bold; 
-color: #94a3b8; 
-text-transform: uppercase; 
-}
 .hamburger-btn {
  background: #2b303a;
  border:2px solid white;
@@ -219,25 +178,10 @@ align-items: center;
 justify-content: center;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
  }
-.menu-links { display: flex; flex-direction: column; gap: 8px; overflow: hidden; }
-.menu-links.collapsed { display: none; }
-.menu-item {
-  display: block; 
-  padding: 10px 12px; 
-  color: #cbd5e1;
-  text-decoration: none; 
-  border-radius: 6px;
- }
-.menu-item:hover, .menu-item.active { background: #3f4756; color: white; }
-.sidebar-footer-promo img { 
-width: 100%;
- border-radius: 6px;
- margin-top: 10px; 
-}
 .footer {
     text-align: center;
     padding: 20px;
-    color: #94a3b8;
+    color: lightslategrey;
     font-size: 0.85rem;
     border-top: 1px solid #3f4756;
     margin-top: 10px;
