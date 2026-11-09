@@ -84,10 +84,10 @@ flex-grow: 1;
  }
 .history-table th {
     text-align: left;
-    border-bottom: 1px solid #4b5563;
+    border-bottom: 1px solid dimgrey;
     padding: 8px 4px;
     font-size: 0.9rem;
-    color: #94a3b8;
+    color: lightslategrey;
     position: sticky;
     top: 0;
     background: #2b303a;
@@ -97,7 +97,7 @@ flex-grow: 1;
 font-size: 0.88rem; 
 border-bottom: 1px solid #3f4756;
  }
-.status-pending { color: #fbbf24; font-weight: bold; }
+.status-pending { color: gold; font-weight: bold; }
 .request-form { 
 display: flex; 
 flex-direction: column;
@@ -112,14 +112,14 @@ align-items: center;
 .schedule-row select {
     padding: 6px 12px;
     border-radius: 4px;
-    background: #3f4756;
+    background: darkslategrey;
     color: white;
-    border: 1px solid #4b5563;
+    border: 1px solid dimgrey;
 }
 .submit-btn {
     flex-grow: 0.5;
     width: 40%;
-    background-color: #008711;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 8px;
