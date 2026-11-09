@@ -31,7 +31,7 @@ body {
     margin-left:0;
     margin-right:auto;
 }
-.history-box, .request-box, .log-waste-box {
+.history-box,.log-waste-box,.request-box{
     background: #2b303a; 
     border: 1px solid darkslategrey;
     border-radius: 8px;
