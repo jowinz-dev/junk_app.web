@@ -16,7 +16,7 @@ body {
     background-position: center;
     background-attachment: fixed;
      padding:120px 20px 20px 20px; 
-    color: #ffffff; }
+    color: white; }
 
 .dashboard-container {
     display: grid;
@@ -46,13 +46,13 @@ body {
     font-size: 2.2rem;       
     font-weight: 800;     
     margin-bottom: 8px;
-    color: #ffffff;
+    color: white;
     letter-spacing: -0.5px;
 }
 .welcome-text-bg p {
     font-size: 1.1rem;    
     font-weight: 500;      
-    color: #e2e8f0;        
+    color: lavender;        
 }
 .history-box {
     grid-column: 2;
@@ -181,7 +181,7 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 .footer {
     text-align: center;
     padding: 20px;
-    color: #94a3b8;
+    color: lightslategrey;
     font-size: 0.85rem;
     border-top: 1px solid #3f4756;
     margin-top: 10px;
