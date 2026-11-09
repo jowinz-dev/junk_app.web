@@ -95,7 +95,7 @@ flex-grow: 1;
 .history-table td {
  padding: 10px 4px; 
 font-size: 0.88rem; 
-border-bottom: 1px solid #3f4756;
+border-bottom: 1px solid darkslategrey;
  }
 .status-pending { color: gold; font-weight: bold; }
 .request-form { 
@@ -130,7 +130,7 @@ align-items: center;
 .log-waste-box h2 { font-size: 1.3rem; margin-bottom: 4px; }
 .log-waste-box .subtitle { 
 font-size: 0.9rem; 
-color: #94a3b8;
+color: lightslategrey;
 margin-bottom: 15px;
 padding:0;
  }
@@ -145,9 +145,9 @@ flex-direction: column;
 .form-group select {
     padding: 10px;
     border-radius: 6px;
-    background: #3f4756;
+    background: darkslategrey;
     color: white;
-    border: 1px solid #4b5563;
+    border: 1px solid dimgrey;
     width: 80%;
     max-width: 400px;
 }
@@ -183,6 +183,6 @@ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     padding: 20px;
     color: lightslategrey;
     font-size: 0.85rem;
-    border-top: 1px solid #3f4756;
+    border-top: 1px solid darkslategrey;
     margin-top: 10px;
 }
