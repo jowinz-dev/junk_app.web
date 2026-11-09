@@ -20,7 +20,7 @@ body {
 
 .dashboard-container {
     display: grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:20px 1fr 1fr;
     grid-template-rows: min-content minmax(220px, auto) min-content min-content;
     gap: 20px;
     max-width: 1400px;
