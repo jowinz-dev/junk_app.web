@@ -118,13 +118,13 @@ align-items: center;
     border: 1px solid dimgrey;
 }
 .submit-btn {
-    flex-grow: 0.5;
-    width: 40%;
+    flex-grow: 0.8;
+    width: 20%;
     background-color: green;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 0.8rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
     font-weight: bold;
     cursor: pointer;
 }
