@@ -33,12 +33,6 @@ body {
     border-radius: 8px;
     padding: 20px;
 }
-.sidebar,.history-box, .request-box, .log-waste-box {
-    background: #2b303a; 
-    border: 1px solid #3f4756;
-    border-radius: 8px;
-    padding: 20px;
-}
 .welcome-text-bg {
     grid-column: 2 / span 2;
     grid-row: 1;
