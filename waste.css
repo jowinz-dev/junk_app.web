@@ -8,7 +8,7 @@
 .log-waste-box {
     order: 2;
     grid-column: 2 / span 2;
-    width: 80%;             
+    width: 100%;             
     box-sizing: border-box;  
 }
 body {
@@ -27,7 +27,7 @@ body {
     max-width: 1400px;
     justify-content: start;
     justify-items: start;
-    width: 80%;
+    width: 100%;
     margin-left:0;
     margin-right:auto;
 }
@@ -83,7 +83,7 @@ body {
 flex-grow: 1; 
 }
 .history-table {
- width: 80%;
+ width: 100%;
  border-collapse: collapse;
  }
 .history-table th {
@@ -138,11 +138,13 @@ color: lightslategrey;
 margin-bottom: 15px;
 padding:0;
  }
-.log-form { display: flex; 
+.log-form {
+display: flex; 
 flex-direction: column; 
 gap: 12px; 
 }
-.form-group { display: flex; 
+.form-group { 
+display: flex; 
 flex-direction: column;
  gap: 6px;
  }
@@ -152,8 +154,8 @@ flex-direction: column;
     background: darkslategrey;
     color: white;
     border: 1px solid dimgrey;
-    width: 80%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 800px;
 }
 .form-group-radio { margin-top: 5px; }
 .radio-label {
@@ -182,11 +184,3 @@ align-items: center;
 justify-content: center;
 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
  }
-.footer {
-    text-align: center;
-    padding: 20px;
-    color: lightslategrey;
-    font-size: 0.85rem;
-    border-top: 1px solid darkslategrey;
-    margin-top: 10px;
-}
