@@ -30,7 +30,7 @@ body {
     margin-left:0;
     margin-right:auto;
 }
-.history-box, .request-box, .log-waste-box {
+.sidebar,.history-box, .request-box, .log-waste-box {
     background: #2b303a; 
     border: 1px solid #3f4756;
     border-radius: 8px;
