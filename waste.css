@@ -35,6 +35,7 @@ body {
     border: 1px solid darkslategrey;
     border-radius: 8px;
     padding: 20px;
+    max-width:800px;
 }
 .welcome-text-bg {
     grid-column: 2 / span 2;
