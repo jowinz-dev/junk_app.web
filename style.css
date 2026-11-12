@@ -347,12 +347,16 @@ body{
    RESPONSIVE DESIGN FOR MOBILE PHONES
    ========================================== */
 @media (max-width: 900px) {
-    /* 1. Stack and space out the header elements neatly */
+    /* 1. Reset body and header for mobile */
+    body {
+        overflow-x: hidden;
+    }
+
     .header {
         position: relative;
         padding: 15px 5%;
         flex-direction: column;
-        background: rgba(1, 74, 38, 0.9);
+        background: rgba(1, 74, 38, 0.95);
         backdrop-filter: blur(8px);
     }
 
@@ -361,71 +365,76 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 12px;
     }
 
     .sitenav a {
         margin-right: 0;
-        padding: 5px 10px;
         font-size: 14px;
     }
 
-    /* 2. Unpin the container from absolute center and allow vertical stacking */
+    /* 2. COMPLETELY RESET THE CONTAINER FOR MOBILE STACKING */
     .container {
-        position: relative;
-        width: 92%;
-        height: auto;
-        top: 0;
-        left: 0;
-        transform: none;
-        margin: 20px auto;
-        display: flex;
-        flex-direction: column;
-        background: transparent;
+        position: relative !important;
+        top: unset !important;
+        left: unset !important;
+        transform: none !important;
+        width: 92% !important;
+        height: auto !important;
+        margin: 20px auto !important;
+        background: rgba(2, 4, 16, 0.85);
         border-radius: 10px;
+        display: flex !important;
+        flex-direction: column !important;
         overflow: hidden;
     }
 
-    /* 3. Stack the text content full width on top */
+    /* 3. STACK THE LEFT CONTENT BOX NORMALLY ON TOP */
     .container .content {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 30px 20px;
+        position: relative !important;
+        top: unset !important;
+        left: unset !important;
+        width: 100% !important;
+        height: auto !important;
+        padding: 30px 20px !important;
         text-align: center;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
     }
 
     .text-sci h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .text-sci h2 span {
-        font-size: 22px;
+        font-size: 20px;
     }
 
     .social-icons {
-        justify-content: center;
         display: flex;
+        justify-content: center;
         margin-top: 15px;
     }
 
-    /* 4. Place the login/register box cleanly underneath */
+    /* 4. STACK THE LOGIN/REGISTER BOX DIRECTLY UNDERNEATH */
     .container .logreg-box {
-        position: relative;
-        width: 100%;
-        height: 520px;
-        right: auto;
+        position: relative !important;
+        top: unset !important;
+        right: unset !important;
+        width: 100% !important;
+        height: 500px !important;
+        overflow: hidden;
     }
 
-    /* 5. Force input boxes to scale safely inside mobile screens */
+    /* 5. FIX INPUT BOX SIZING TO FIT PHONES */
+    .form-box {
+        padding: 20px !important;
+    }
+
     .form-box .input-box {
         width: 100% !important;
-        max-width: 280px;
-        margin: 20px auto;
-    }
-
-    /* 6. Adjust form padding for mobile viewports */
-    .form-box {
-        padding: 20px;
+        max-width: 280px !important;
+        margin: 20px auto !important;
     }
 }
