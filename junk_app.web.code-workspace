@@ -1,13 +1,14 @@
 {
 	"folders": [
 		{
-			"path": "../../junk_app.web"
+			"path": "."
 		},
 		{
-			"path": "."
+			"name": "dc motor no cb",
+			"path": "../OneDrive/Documents/PlatformIO/Projects/dc motor no cb"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "website"
+		"liveServer.settings.multiRootWorkspaceName": "junk_app.web"
 	}
 }

@@ -59,8 +59,7 @@
     border-radius: 6px;
     display: flex;
     align-items: center;
-    align-self: center; /* Forces this specific item to stay centered */
-    margin: 0;
+    overflow:hidden;
 }
 .search-bar input{
     width: 100%;
@@ -68,10 +67,9 @@
     background: transparent;
     border:none;
     outline:none;
-    padding:0 15px;
+    padding:0 10 px 0 15px;
     font-size: 16px;
     color: #e4e4e4;
-    padding-left: 10px;
 }
 .search-bar input::placeholder{
     color: #e4e4e4;
@@ -90,4 +88,40 @@
 .search-bar button i{
     font-size: 22px;
     color: #e4e4e4;
+}
+/* 1. Make sure the parent wrapper holding both elements is relative */
+.search-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* 2. Turn your #item-list into a sleek dropdown box */
+#item-list {
+    position: absolute;
+    top: 52px; /* Places it right below the 45px search bar + borders */
+    left: 0;
+    width: 100%; /* Matches the width of the container/search bar */
+    background: rgba(1, 74, 38, 0.9); /* Matches your header theme */
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    list-style: none; /* Removes the ugly bullet points */
+    padding: 8px 0;
+    margin: 0;
+    z-index: 100;
+    display:none;
+}
+
+/* 3. Style each individual list result item */
+#item-list li {
+    padding: 10px 15px;
+    color: #e4e4e4;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* 4. Add a nice hover effect when moving the mouse over results */
+#item-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
