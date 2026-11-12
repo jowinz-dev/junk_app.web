@@ -342,3 +342,90 @@ body{
 .login-register p a:hover{
     text-decoration:underline;
 }
+
+/* ==========================================
+   RESPONSIVE DESIGN FOR MOBILE PHONES
+   ========================================== */
+@media (max-width: 900px) {
+    /* 1. Stack and space out the header elements neatly */
+    .header {
+        position: relative;
+        padding: 15px 5%;
+        flex-direction: column;
+        background: rgba(1, 74, 38, 0.9);
+        backdrop-filter: blur(8px);
+    }
+
+    .sitenav {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .sitenav a {
+        margin-right: 0;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    /* 2. Unpin the container from absolute center and allow vertical stacking */
+    .container {
+        position: relative;
+        width: 92%;
+        height: auto;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        background: transparent;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    /* 3. Stack the text content full width on top */
+    .container .content {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .text-sci h2 {
+        font-size: 32px;
+    }
+
+    .text-sci h2 span {
+        font-size: 22px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        display: flex;
+        margin-top: 15px;
+    }
+
+    /* 4. Place the login/register box cleanly underneath */
+    .container .logreg-box {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        right: auto;
+    }
+
+    /* 5. Force input boxes to scale safely inside mobile screens */
+    .form-box .input-box {
+        width: 100% !important;
+        max-width: 280px;
+        margin: 20px auto;
+    }
+
+    /* 6. Adjust form padding for mobile viewports */
+    .form-box {
+        padding: 20px;
+    }
+}
