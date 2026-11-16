@@ -1,0 +1,12 @@
+*{box-sizing: boder-box;}
+body{
+  margin:0;
+  overflow-x:hidden;
+}
+@media (max-width: 768px){
+  nav{flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+     }
+}
+  
