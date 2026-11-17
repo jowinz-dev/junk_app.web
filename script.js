@@ -16,8 +16,6 @@ if (loginLink && logregBox) {
 function handleCredentialResponse(response) {
     console.log("Encoded JWT ID token: " + response.credential);
     
-    // Optional: Decode the Google JWT payload to get email/name if needed
-    // For simplicity, we parse the base64 payload from the JWT token:
     let responsePayload = {};
     try {
         const base64Url = response.credential.split('.')[1];
@@ -33,37 +31,31 @@ function handleCredentialResponse(response) {
     const googleEmail = responsePayload.email || "google_user@ucu.ac.ug";
     const googleName = responsePayload.name || "Google User";
 
-    // Check if user already exists in usersList
     let users = JSON.parse(localStorage.getItem("usersList")) || [];
     let existingUser = users.find(user => user.email === googleEmail);
 
     let assignedRole = "collector"; // default fallback
 
     if (existingUser) {
-        // If user exists, use their saved role
         assignedRole = existingUser.role || "collector";
         localStorage.setItem("currentUser", existingUser.name);
         localStorage.setItem("userRole", assignedRole);
     } else {
-        // If it's a new user via Google, check if they selected a role on your register dropdown, or default to collector
         const roleSelect = document.getElementById('user-role-select');
         if (roleSelect && roleSelect.value) {
             assignedRole = roleSelect.value;
         }
 
-        // Push into usersList so it matches your local DB structure
         users.push({ name: googleName, email: googleEmail, password: "GOOGLE_OAUTH_USER", role: assignedRole });
         localStorage.setItem("usersList", JSON.stringify(users));
         localStorage.setItem("currentUser", googleName);
         localStorage.setItem("userRole", assignedRole);
     }
 
-    // Set login flag
     localStorage.setItem("isLoggedIn", "true");
     
     alert(`Successfully signed in with Google as ${googleName} ^_^`);
 
-    // Route based on role
     if (assignedRole === "producer") {
         window.location.href = "waste.html";
     } else {
@@ -71,15 +63,40 @@ function handleCredentialResponse(response) {
     }
 }
 
-// Handle Login Form Submission
+// ==========================================
+// HANDLE SECURE LOGIN FORM SUBMISSION
+// ==========================================
 const loginForm = document.querySelector('.form-box.login form');
 if (loginForm) {
     loginForm.addEventListener('submit', function(e) {
         e.preventDefault();
+
+        const emailInput = loginForm.querySelector('input[type="email"]');
+        const passwordInput = loginForm.querySelector('input[type="password"]');
+
+        const enteredEmail = emailInput ? emailInput.value.trim() : "";
+        const enteredPassword = passwordInput ? passwordInput.value : "";
+
+        let users = JSON.parse(localStorage.getItem("usersList")) || [];
+        const targetUser = users.find(user => user.email === enteredEmail);
+
+        if (!targetUser) {
+            alert("No account found with this email. Please register first!");
+            return;
+        }
+
+        if (targetUser.password !== enteredPassword) {
+            alert("Incorrect password! Please try again.");
+            return;
+        }
+
         localStorage.setItem("isLoggedIn", "true");
-        
-        const savedRole = localStorage.getItem("userRole") || "collector";
-        if (savedRole === "producer") {
+        localStorage.setItem("currentUser", targetUser.name);
+        localStorage.setItem("userRole", targetUser.role || "collector");
+
+        alert(`Welcome back, ${targetUser.name}! ^_^`);
+
+        if (targetUser.role === "producer") {
             window.location.href = "waste.html";
         } else {
             window.location.href = "collector.html";
@@ -91,7 +108,7 @@ function logoutUser() {
     localStorage.removeItem("isLoggedIn");
     localStorage.removeItem("userRole");
     localStorage.removeItem("currentUser");
-    window.location.href = "index.html";
+    window.location.href = "signin.html";
 }
 
 // Dynamic Navbar & Services Link Binding
@@ -118,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         });
                     } else {
                         authLink.textContent = "Sign In";
-                        authLink.href = "index.html";
+                        authLink.href = "signin.html";
                     }
                 }
 
@@ -138,14 +155,43 @@ document.addEventListener("DOMContentLoaded", function () {
                             }
                         } else {
                             alert("Please sign in first to access your services dashboard.");
-                            window.location.href = "index.html";
+                            window.location.href = "signin.html";
                         }
+                    });
+                }
+
+                // 3. SEARCH BAR LOGIC
+                const searchInput = document.getElementById('search-input');
+                const itemList = document.getElementById('item-list');
+                
+                if (searchInput && itemList) {
+                    const listItems = itemList.querySelectorAll('li');
+
+                    searchInput.addEventListener('input', function(event) {
+                        const query = event.target.value.toLowerCase().trim();
+
+                        if (query === '') {
+                            itemList.style.display = 'none';
+                            return;
+                        }
+
+                        itemList.style.display = 'block';
+
+                        listItems.forEach(item => {
+                            const text = item.textContent.toLowerCase();
+                            if (text.includes(query)) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
                     });
                 }
             }
         })
         .catch(error => console.error("Error loading navbar:", error));
-// 2. Fetch and Load Footer (NEW)
+
+    // Fetch and Load Footer
     fetch("footer.html")
         .then(response => {
             if (!response.ok) throw new Error("Footer network response was not ok");
@@ -159,7 +205,35 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(error => console.error("Error loading footer:", error));
 });
-// Handle Sign Up Form Submission
+
+// ==========================================
+// PASSWORD STRENGTH VALIDATION FUNCTION
+// ==========================================
+function validatePasswordStrength(password) {
+    const minLength = 8;
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasNumber = /[0-9]/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password); 
+
+    if (password.length < minLength) {
+        return "Password must be at least " + minLength + " characters long.";
+    }
+    if (!hasUpperCase) {
+        return "Password must contain at least one uppercase letter (A-Z).";
+    }
+    if (!hasNumber) {
+        return "Password must contain at least one number (0-9).";
+    }
+    if (!hasSpecialChar) {
+        return "Password must contain at least one special character (e.g., @, #, !, $).";
+    }
+
+    return "valid"; 
+}
+
+// ==========================================
+// HANDLE SIGN UP FORM SUBMISSION WITH VALIDATION
+// ==========================================
 const registerForm = document.querySelector('.form-box.register form');
 if (registerForm) {
     registerForm.addEventListener('submit', function(e) {
@@ -171,9 +245,16 @@ if (registerForm) {
         const roleSelect = document.getElementById('user-role-select');
         
         const name = nameInput ? nameInput.value : "";
-        const email = emailInput ? emailInput.value : "";
+        const email = emailInput ? emailInput.value.trim() : "";
         const password = passwordInput ? passwordInput.value : "";
         const selectedRole = roleSelect ? roleSelect.value : "collector";
+
+        // Validate password rules before creating user
+        const passwordCheck = validatePasswordStrength(password);
+        if (passwordCheck !== "valid") {
+            alert(passwordCheck);
+            return;
+        }
 
         let users = JSON.parse(localStorage.getItem("usersList")) || [];
         const userExists = users.some(user => user.email === email);
@@ -198,3 +279,24 @@ if (registerForm) {
         }
     });
 }
+
+// ==========================================
+// PASSWORD VISIBILITY TOGGLE (EYE ICON)
+// ==========================================
+const togglePasswordIcons = document.querySelectorAll('.toggle-password');
+
+togglePasswordIcons.forEach(icon => {
+    icon.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        const passwordInput = document.getElementById(targetId);
+
+        if (passwordInput) {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // Switch icon state between open eye and closed eye
+            this.classList.toggle('bx-show');
+            this.classList.toggle('bx-hide');
+        }
+    });
+});
