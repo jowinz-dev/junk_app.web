@@ -343,30 +343,40 @@ body{
 .login-register p a:hover{
     text-decoration:underline;
 }
-
 /* ==========================================
    RESPONSIVE DESIGN FOR MOBILE PHONES
    ========================================== */
 @media (max-width: 768px) {
-    /* 1. Reset body and header for mobile */
     body {
         overflow-x: hidden;
+        min-height: 100vh;
     }
 
+    /* Fix the blurred background so it covers full scroll height */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    /* Stack logo and nav links cleanly */
     .header {
         position: relative;
         padding: 15px 5%;
         flex-direction: column;
+        gap: 10px;
         background: rgba(1, 74, 38, 0.95);
         backdrop-filter: blur(8px);
     }
 
     .sitenav {
-        margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
+        gap: 15px;
     }
 
     .sitenav a {
@@ -374,74 +384,93 @@ body{
         font-size: 14px;
     }
 
-    /* 2. COMPLETELY RESET THE CONTAINER FOR MOBILE STACKING */
+    .search-bar {
+        width: 100%;
+        max-width: 280px;
+        height: 40px;
+    }
+
+    /* Reset container from absolute centering to normal vertical stack */
     .container {
         position: relative !important;
         top: unset !important;
         left: unset !important;
         transform: none !important;
-        width: 100%;
+        width: 92%;
         height: auto !important;
         margin: 20px auto !important;
-        background: rgba(2, 4, 16, 0.85);
-        border-radius: 10px;
         display: flex !important;
-        flex-direction: column ;
+        flex-direction: column;
         overflow: hidden;
-        padding:10px;
     }
 
-    /* 3. STACK THE LEFT CONTENT BOX NORMALLY ON TOP */
+    /* Top Welcome Section */
     .container .content {
         position: relative !important;
         top: unset !important;
         left: unset !important;
         width: 100% !important;
         height: auto !important;
-        padding: 30px 20px !important;
+        padding: 30px 20px;
         text-align: center;
-        display: flex !important;
-        flex-direction: column;
         align-items: center;
+        background: rgba(2, 4, 16, 0.55);
     }
 
     .text-sci h2 {
         font-size: 28px;
+        line-height: 1.2;
     }
 
     .text-sci h2 span {
-        font-size: 20px;
+        font-size: 18px;
     }
 
+    .text-sci p {
+        font-size: 14px;
+        margin: 15px 0;
+    }
+
+    /* Stack social icons horizontally instead of vertically */
     .social-icons {
         display: flex;
         justify-content: center;
-        margin-top: 15px;
+        gap: 15px;
+        margin-top: 10px;
     }
 
-    /* 4. STACK THE LOGIN/REGISTER BOX DIRECTLY UNDERNEATH */
+    .social-icons a i {
+        margin-right: 0;
+    }
+
+    /* Bottom Sign In / Register Box */
     .container .logreg-box {
         position: relative !important;
         top: unset !important;
         right: unset !important;
-        width: 100% ;
-        height: 500px !important;
-        overflow: hidden;
-    }
-
-    /* 5. FIX INPUT BOX SIZING TO FIT PHONES */
-    .form-box {
-        padding: 20px !important;
-    }
-
-    .form-box .input-box {
         width: 100% !important;
-        max-width: 280px !important;
-        margin: 20px auto !important;
+        min-height: 460px;
     }
- .row,.columns{
-  flex-direction:column;
-   width:100%;
-   padding:10px;
- }
+
+    .logreg-box .form-box {
+        padding: 25px 20px;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .logreg-box .form-box form {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Make inputs fit inside 360px screens without clipping */
+    .form-box .input-box {
+        width: 100%;
+        margin: 22px 0;
+    }
+
+    .form-box .remember-forgot {
+        font-size: 13px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
 }
